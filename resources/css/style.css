@@ -1,0 +1,62 @@
+--root {
+    --primary: black;
+    --secondary: orange;
+}
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Anton', sans-serif;
+    color: orange;
+}
+
+body {
+    background-color: black !important;
+}
+
+a:hover{
+    color: orange !important;
+}
+
+p {
+    color: white;
+}
+
+#everything {
+    margin-top: 70px;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 50px);
+    }
+    100% {
+        opacity: 1;
+        
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    animation: fadeUp 1s ease-in;
+    font-size: 7rem;
+}
+
+#homePageH2Title {
+    animation: fadeUp 2s ease-in;
+}
+
+#homePageH6Title {
+    animation: fadeIn 6s ease-in;
+}
