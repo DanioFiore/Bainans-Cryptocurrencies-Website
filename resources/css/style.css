@@ -50,7 +50,7 @@ p {
 
 h1 {
     animation: fadeUp 1s ease-in;
-    font-size: 15rem;
+    font-size: 3.5rem;
 }
 
 #homePageH2Title {
@@ -61,3 +61,20 @@ h1 {
     animation: fadeIn 6s ease-in;
 }
 
+/* Breakpoints */
+@media (min-width: 500px){
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 9.5rem;
+    }
+}
+@media (min-width: 1024px){
+    h1 {
+        font-size: 14rem;
+    }
+}
