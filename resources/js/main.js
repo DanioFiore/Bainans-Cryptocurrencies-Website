@@ -13,4 +13,3 @@ togglerButton.addEventListener('click', ()=> {
         isClickedTogglerButton=true;
     }
 })
-

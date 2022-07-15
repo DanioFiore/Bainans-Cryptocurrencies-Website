@@ -48,13 +48,13 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cryptovalute</a>
+                    <a class="nav-link" href="#">Cryptocurrencies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Iscriviti</a>
+                    <a class="nav-link" href="#">Sign-up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contattaci</a>
+                    <a class="nav-link" href="#">Contact Us</a>
                 </li>
                 </ul>
             </div>

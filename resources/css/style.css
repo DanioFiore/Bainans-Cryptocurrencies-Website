@@ -50,7 +50,7 @@ p {
 
 h1 {
     animation: fadeUp 1s ease-in;
-    font-size: 7rem;
+    font-size: 15rem;
 }
 
 #homePageH2Title {
@@ -60,3 +60,4 @@ h1 {
 #homePageH6Title {
     animation: fadeIn 6s ease-in;
 }
+
