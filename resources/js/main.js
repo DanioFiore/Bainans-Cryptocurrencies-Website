@@ -27,5 +27,73 @@ function handleIntersection(entries) {
 }
 
 
-let observer = new IntersectionObserver(handleIntersection);
-observer.observe(targetCounterId)
+let observerCounterShow = new IntersectionObserver(handleIntersection);
+observerCounterShow.observe(targetCounterId)
+
+// counter
+let counterH4first = document.querySelector('.counterH4first');
+let counterH4second = document.querySelector('.counterH4second');
+let counterH4third = document.querySelector('.counterH4third');
+let counterFirst = 0;
+let counterSecond = 500;
+let counterThird = 0;
+
+function showCounter1(entries) {
+    entries.map((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0')
+            let counterInterval1 = setInterval(() => {
+                counterFirst++
+                counterH4first.innerHTML =`&dollar;${counterFirst} billion`
+                if (counterFirst >= 99) {
+                    clearInterval(counterInterval1)
+                }
+
+            }, 50);
+        } 
+
+    })
+}
+
+const observerCounterStart1 = new IntersectionObserver(showCounter1);
+observerCounterStart1.observe(counterH4first);
+
+function showCounter2(entries) {
+    entries.map((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0')
+            let counterInterval2 = setInterval(() => {
+                counterSecond++
+                counterH4second.innerHTML =`${counterSecond} +`
+                if (counterSecond >= 599) {
+                    clearInterval(counterInterval2)
+                }
+
+            }, 50);
+        } 
+
+    })
+}
+
+const observerCounterStart2 = new IntersectionObserver(showCounter2);
+observerCounterStart2.observe(counterH4second);
+
+function showCounter3(entries) {
+    entries.map((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0')
+            let counterInterval3 = setInterval(() => {
+                counterThird++
+                counterH4third.innerHTML =`${counterThird} milion`
+                if (counterThird >= 89) {
+                    clearInterval(counterInterval3)
+                }
+
+            }, 50);
+        } 
+
+    })
+}
+
+const observerCounterStart3 = new IntersectionObserver(showCounter3);
+observerCounterStart3.observe(counterH4third);
