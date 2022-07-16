@@ -1,7 +1,9 @@
 <x-layout>
-    {{-- title start --}}
+    
     <x-slot name="title">Bainans - Home</x-slot>
-    <div id="everything">
+    <div id="title">
+        
+        {{-- title start --}}
         <h1 class="text-center" id="homePageH1">
             B A I N A N S
         </h1>
@@ -11,8 +13,10 @@
         <h6 class="text-center" id="homePageH6Title">
             (Even in the Bear Market)
         </h6>
+        {{-- title end --}}
+
     </div>
-    {{-- title end --}}
+    
 
     {{-- carousel start --}}
     <div class="container-fluid mt-5">
@@ -40,5 +44,38 @@
     </div>
     
     {{-- carousel end --}}
+    <div id="counterId" class="mt-5 opacity-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4">
+                    <h4>
+                        $100 billion
+                    </h4>
+                    <p>
+                        24h trading volume on Bainans exchange
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4>
+                        1000+
+                    </h4>
+                    <p>
+                        Cryptocurrencies listed
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4>
+                        90 milion
+                    </h4>
+                    <p>
+                        Registered users
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {{-- counters start --}}
+
 
 </x-layout>

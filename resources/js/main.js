@@ -13,3 +13,19 @@ togglerButton.addEventListener('click', ()=> {
         isClickedTogglerButton=true;
     }
 })
+
+// intersection observer counter
+let targetCounterId = document.querySelector('#counterId')
+
+function handleIntersection(entries) {
+    entries.map((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0')
+            entry.target.style.animation = 'fadeUp 1s'
+        }
+    })
+}
+
+
+let observer = new IntersectionObserver(handleIntersection);
+observer.observe(targetCounterId)
