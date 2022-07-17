@@ -30,7 +30,7 @@ function handleIntersection(entries) {
 let observerCounterShow = new IntersectionObserver(handleIntersection);
 observerCounterShow.observe(targetCounterId)
 
-// counter
+// create the counter
 let counterH4first = document.querySelector('.counterH4first');
 let counterH4second = document.querySelector('.counterH4second');
 let counterH4third = document.querySelector('.counterH4third');
@@ -38,6 +38,7 @@ let counterFirst = 0;
 let counterSecond = 500;
 let counterThird = 0;
 
+// first counter
 function showCounter1(entries) {
     entries.map((entry) => {
         if (entry.isIntersecting) {
@@ -58,6 +59,7 @@ function showCounter1(entries) {
 const observerCounterStart1 = new IntersectionObserver(showCounter1);
 observerCounterStart1.observe(counterH4first);
 
+// second counter
 function showCounter2(entries) {
     entries.map((entry) => {
         if (entry.isIntersecting) {
@@ -78,6 +80,7 @@ function showCounter2(entries) {
 const observerCounterStart2 = new IntersectionObserver(showCounter2);
 observerCounterStart2.observe(counterH4second);
 
+// third counter
 function showCounter3(entries) {
     entries.map((entry) => {
         if (entry.isIntersecting) {
@@ -97,3 +100,5 @@ function showCounter3(entries) {
 
 const observerCounterStart3 = new IntersectionObserver(showCounter3);
 observerCounterStart3.observe(counterH4third);
+
+// crypto api

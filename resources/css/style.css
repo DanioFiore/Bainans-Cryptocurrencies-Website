@@ -61,6 +61,13 @@ h1 {
     animation: fadeIn 6s ease-in;
 }
 
+.cryptoTableLogo {
+    width: 32px;
+    height: 32px;
+}
+
+
+
 /* Breakpoints */
 @media (min-width: 500px){
     h1 {
