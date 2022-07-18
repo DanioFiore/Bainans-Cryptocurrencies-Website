@@ -1,9 +1,15 @@
 <x-layout>
     
     <x-slot name="title">Bainans - Home</x-slot>
+
+    @if (session('flash'))
+        <div class="alert alert-success" style="margin-top: 45px">
+            {{session('flash')}}
+        </div>
+    @endif
+
+    {{-- title start --}}
     <div id="title">
-        
-        {{-- title start --}}
         <h1 class="text-center" id="homePageH1">
             B A I N A N S
         </h1>
@@ -13,9 +19,8 @@
         <h6 class="text-center" id="homePageH6Title">
             (Even in the Bear Market)
         </h6>
-        {{-- title end --}}
-
     </div>
+    {{-- title end --}}
     
 
     {{-- carousel start --}}
@@ -42,7 +47,6 @@
             </div>
         </div>
     </div>
-    
     {{-- carousel end --}}
 
     {{-- counters start --}}
@@ -85,6 +89,8 @@
                 <th class="text-warning" scope="col">Rank</th>
                 <th class="text-warning" scope="col">Symbol</th>
             </tr>
+        </thead>
+        <tbody id="data">
             <tr>
                 <td class="text-white">
                     <img class="cryptoTableLogo" src="/img/bitcoin-logo.webp" alt="bitcoin logo">
@@ -157,7 +163,7 @@
                     {{ Cryptocap::getSingleAsset('binance-usd')->data->symbol }}
                 </td>
             </tr>
-        </thead>
-        <tbody id="data"></tbody>
+        </tbody>
     </table>
+    {{-- table crypto end --}}
 </x-layout>
