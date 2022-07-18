@@ -8,10 +8,10 @@
 </head>
 <body>
     <h1>
-        Hi {{$contact['name']}}, thanks for contact us!
+        Hi {{$contact['name']}}, thanks for contacting us!
     </h1>
     <h2>
-        You will be contacted at {{$contact['email']}}
+        You will soon receive an answer at {{$contact['email']}}
     </h2>
     <h2>
         Recap of your message:

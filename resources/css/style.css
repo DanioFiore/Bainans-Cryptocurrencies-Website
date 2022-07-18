@@ -28,10 +28,6 @@ p {
     margin-top: 70px;
 }
 
-#formContactUs {
-    margin-top: 70px;
-}
-
 @keyframes fadeUp {
     0% {
         opacity: 0;

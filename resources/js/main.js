@@ -101,4 +101,16 @@ function showCounter3(entries) {
 const observerCounterStart3 = new IntersectionObserver(showCounter3);
 observerCounterStart3.observe(counterH4third);
 
-// crypto api
+// Crypto Home table intersection observer
+let cryptoHomeTable = document.querySelector('#cryptoHomeTable')
+let cryptoHomeTableObserver = new IntersectionObserver(handleIntersection)
+cryptoHomeTableObserver.observe(cryptoHomeTable)
+
+// remove Successfull sending email div
+let flashDivShow = document.querySelector('#flashDivShow')
+let closeFlashButton = document.querySelector('#closeFlashButton')
+
+closeFlashButton.addEventListener('click', ()=> {
+    flashDivShow.style = "visibility: hidden";
+    console.log(flashDivShow)
+})

@@ -3,8 +3,9 @@
     <x-slot name="title">Bainans - Home</x-slot>
 
     @if (session('flash'))
-        <div class="alert alert-success" style="margin-top: 45px">
+        <div id="flashDivShow" class="alert alert-success d-flex justify-content-between" style="margin-top: 50px">
             {{session('flash')}}
+            <button id="closeFlashButton" type="button" class="btn btn-outline-danger">x</button>
         </div>
     @endif
 
@@ -80,7 +81,7 @@
     {{-- counters end --}}
 
     {{-- table crypto start --}}
-    <table class="table">
+    <table id="cryptoHomeTable" class="table opacity-0">
         <thead>
             <tr>
                 <th class="text-warning" scope="col">Name</th>
