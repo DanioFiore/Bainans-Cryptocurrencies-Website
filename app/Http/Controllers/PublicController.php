@@ -34,4 +34,9 @@ class PublicController extends Controller
 
         return redirect(route('homepage'))->with('flash', 'Successfully sending Email!');
     }
+
+    public function cryptocurrencies() {
+        Cryptocap::getAssets();
+        return view('cryptocurrencies');
+    }
 }

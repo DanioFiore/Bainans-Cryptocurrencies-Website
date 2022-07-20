@@ -46,7 +46,7 @@
                     <a class="nav-link" href="{{route('homepage')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cryptocurrencies</a>
+                    <a class="nav-link" href="{{route('cryptocurrencies')}}">Cryptocurrencies</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Sign-up</a>

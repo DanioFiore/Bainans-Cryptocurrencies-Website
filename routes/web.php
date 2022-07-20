@@ -17,3 +17,4 @@ use App\Http\Controllers\PublicController;
 Route::get('/', [PublicController::class, 'home'])->name('homepage');
 Route::get('/contactUs', [PublicController::class, 'contactUs'])->name('contactUs');
 Route::post('/contactUs/submit', [PublicController::class, 'contactSubmit'])->name('contactSubmit');
+Route::get('/cryptocurrencies', [PublicController::class, 'cryptocurrencies'])->name('cryptocurrencies');
