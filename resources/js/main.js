@@ -35,7 +35,7 @@ let counterH4first = document.querySelector('.counterH4first');
 let counterH4second = document.querySelector('.counterH4second');
 let counterH4third = document.querySelector('.counterH4third');
 let counterFirst = 0;
-let counterSecond = 500;
+let counterSecond = 0;
 let counterThird = 0;
 
 // first counter
@@ -46,9 +46,10 @@ function showCounter1(entries) {
             let counterInterval1 = setInterval(() => {
                 counterFirst++
                 counterH4first.innerHTML =`&dollar;${counterFirst} billion`
-                if (counterFirst >= 99) {
+                if (counterFirst >= 100) {
                     clearInterval(counterInterval1)
                 }
+                
 
             }, 50);
         } 
@@ -67,9 +68,10 @@ function showCounter2(entries) {
             let counterInterval2 = setInterval(() => {
                 counterSecond++
                 counterH4second.innerHTML =`${counterSecond} +`
-                if (counterSecond >= 599) {
+                if (counterSecond >= 100) {
                     clearInterval(counterInterval2)
                 }
+                
 
             }, 50);
         } 
@@ -88,9 +90,10 @@ function showCounter3(entries) {
             let counterInterval3 = setInterval(() => {
                 counterThird++
                 counterH4third.innerHTML =`${counterThird} milion`
-                if (counterThird >= 89) {
+                if (counterThird >= 90) {
                     clearInterval(counterInterval3)
                 }
+                
 
             }, 50);
         } 

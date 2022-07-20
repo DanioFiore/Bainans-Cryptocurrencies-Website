@@ -36,7 +36,7 @@ class PublicController extends Controller
     }
 
     public function cryptocurrencies() {
-        Cryptocap::getAssets();
-        return view('cryptocurrencies');
+        $cryptos = Cryptocap::getAssets()->data;
+        return view('cryptocurrencies', compact('cryptos'));
     }
 }

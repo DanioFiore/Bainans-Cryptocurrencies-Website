@@ -60,10 +60,13 @@
 
         </div>
     </nav>
-      {{-- navbar end --}}
+    {{-- navbar end --}}
 
+    <div class="everything">
+        {{$slot}}
+    </div>
 
-    {{$slot}}
+    
     
 </body>
 </html>
