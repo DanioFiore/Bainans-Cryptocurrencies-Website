@@ -49,11 +49,32 @@
                     <a class="nav-link" href="{{route('cryptocurrencies')}}">Cryptocurrencies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sign-up</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{{route('contactUs')}}">Contact Us</a>
                 </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    @if(Auth::user() == NULL)
+                    <li class="nav-item">
+                        <a href="{{route('register')}}" class="nav-link">
+                            Register
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('login')}}" class="nav-link">
+                            Login
+                        </a>
+                    </li>
+                    @else
+                    <li class="nav-item">
+                        <p>Hi, {{Auth::user()->name}}</p>
+                    </li>
+                    <li class="nav-item">
+                        <form action="{{route('logout')}}" method="POST">
+                            @csrf
+                            <button class="btn btn-outline-warning">Logout</button>
+                        </form>
+                    </li>
+                    @endif
                 </ul>
             </div>
             {{-- links navbar end --}}

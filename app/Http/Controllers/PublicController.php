@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use WisdomDiala\Cryptocap\Facades\Cryptocap;
 
@@ -11,6 +12,7 @@ use WisdomDiala\Cryptocap\Facades\Cryptocap;
 class PublicController extends Controller
 {
     public function home() {
+        // dd(Auth::user());
         // dd(Cryptocap::getAssets());
         Cryptocap::getSingleAsset('bitcoin');
         Cryptocap::getSingleAsset('ethereum');
@@ -36,7 +38,7 @@ class PublicController extends Controller
     }
 
     public function cryptocurrencies() {
-        $cryptos = Cryptocap::getAssets()->data;
+        $cryptos = Cryptocap::getAssetsWithLimit(30)->data;
         return view('cryptocurrencies', compact('cryptos'));
     }
 }

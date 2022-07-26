@@ -117,3 +117,8 @@ closeFlashButton.addEventListener('click', ()=> {
     flashDivShow.style = "visibility: hidden";
     console.log(flashDivShow)
 })
+
+// show more crypto button
+let showMoreCryptoButton = document.querySelector('#showMoreCryptoButton')
+let cryptoTableAll = document.querySelector('#cryptoTableAll')
+
