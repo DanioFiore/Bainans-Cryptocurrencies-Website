@@ -2,7 +2,7 @@
     {{-- title container start --}}
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12">
+            <div class="col-6">
                 <h2>Login</h2>
                 <h4>You are at Home</h4>
             </div>
@@ -12,7 +12,7 @@
 
     {{-- login form start --}}
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-6">
                 <form action="{{route('login')}}" method="POST">
                     @csrf
