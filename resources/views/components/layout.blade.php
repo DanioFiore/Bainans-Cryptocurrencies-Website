@@ -66,7 +66,8 @@
                     </li>
                     @else
                     <li class="nav-item me-4">
-                        <span class="text-white">Hi, {{Auth::user()->name}}</span>
+                        <span class="text-white">Hi, </span>
+                        <a href="{{route('profile')}}" id="userProfileName" class="text-white"> {{Auth::user()->name}} </a>
                     </li>
                     <li class="nav-item me-4">
                         <form action="{{route('logout')}}" method="POST">

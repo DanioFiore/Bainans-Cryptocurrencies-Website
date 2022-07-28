@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container" style="margin-top: 70px">
+    <div id="contactUsPageTitle" class="container" style="margin-top: 70px">
         <div class="row justify-content-center">
             <div class="col-6">
                 <h2>
@@ -14,7 +14,7 @@
     </div>
     
     {{-- form start --}}
-    <form class="mt-4" id="formContactUs" method="POST" action="{{route('contactSubmit')}}">
+    <form id="contactUsPageForm" class="mt-4" id="formContactUs" method="POST" action="{{route('contactSubmit')}}">
         @csrf
         <div class="container">
             <div class="row justify-content-center">
@@ -32,10 +32,6 @@
                     <div class="mb-3">
                       <label for="exampleInputText" class="form-label text-warning">Your text</label>
                       <input name="text" type="text" class="form-control" id="exampleInputText" required>
-                    </div>
-                    <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label text-white" for="exampleCheck1">Receive our NewsLetter</label>
                     </div>
                     <button type="submit" class="btn btn-warning">Submit</button>
                 </div>

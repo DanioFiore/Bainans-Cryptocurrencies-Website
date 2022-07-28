@@ -78,6 +78,18 @@ h1 {
     animation: fadeUp 1s ease-in;
 }
 
+#contactUsPageTitle{
+    animation: fadeUp 0.5s ease-in;
+}
+
+#contactUsPageForm{
+    animation: fadeUp 1s ease-in;
+}
+
+#userProfileName {
+    text-decoration: none;
+}
+
 .cryptoTableLogo {
     width: 32px;
     height: 32px;

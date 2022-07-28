@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ Route::get('/', [PublicController::class, 'home'])->name('homepage');
 Route::get('/contactUs', [PublicController::class, 'contactUs'])->name('contactUs');
 Route::post('/contactUs/submit', [PublicController::class, 'contactSubmit'])->name('contactSubmit');
 Route::get('/cryptocurrencies', [PublicController::class, 'cryptocurrencies'])->name('cryptocurrencies');
+Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
