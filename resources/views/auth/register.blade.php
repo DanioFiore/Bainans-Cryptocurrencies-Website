@@ -1,8 +1,8 @@
 <x-layout>
     {{-- title container start --}}
-    <div class="container">
+    <div class="container registerPageAnimation">
         <div class="row justify-content-center">
-            <div class="col-12">
+            <div class="col-6">
                 <h2>Register Form</h2>
                 <h4>Be a Bainanser</h4>
             </div>
@@ -20,8 +20,8 @@
     </div>
     @endif
     {{-- register form start --}}
-    <div class="container">
-        <div class="row">
+    <div class="container registerPageAnimation">
+        <div class="row justify-content-center">
             <div class="col-6">
                 <form action="{{route('register')}}" method="POST">
                     @csrf

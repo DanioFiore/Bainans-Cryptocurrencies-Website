@@ -53,7 +53,8 @@
                 </li>
                 </ul>
                 <ul class="navbar-nav mb-2 mb-md-0 d-flex align-items-center">
-                    @if(Auth::user() == NULL)
+                    {{-- @if(Auth::user() == NULL) --}}
+                    @guest
                     <li class="nav-item">
                         <a href="{{route('register')}}" class="nav-link">
                             Register
@@ -64,7 +65,8 @@
                             Login
                         </a>
                     </li>
-                    @else
+                    @endguest
+                    @auth
                     <li class="nav-item me-4">
                         <span class="text-white">Hi, </span>
                         <a href="{{route('profile')}}" id="userProfileName" class="text-white"> {{Auth::user()->name}} </a>
@@ -75,7 +77,7 @@
                             <button class="btn btn-outline-warning">Logout</button>
                         </form>
                     </li>
-                    @endif
+                    @endauth
                 </ul>
             </div>
             {{-- links navbar end --}}

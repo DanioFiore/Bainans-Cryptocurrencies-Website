@@ -78,12 +78,20 @@ h1 {
     animation: fadeUp 1s ease-in;
 }
 
-#contactUsPageTitle{
-    animation: fadeUp 0.5s ease-in;
+.contactUsPageAnimation {
+    animation: fadeIn 1s ease-in;
 }
 
-#contactUsPageForm{
-    animation: fadeUp 1s ease-in;
+.registerPageAnimation {
+    animation: fadeIn 1s ease-in;
+}
+
+.loginPageAnimation {
+    animation: fadeIn 1s ease-in;
+}
+
+.profilePageAnimation {
+    animation: fadeIn 1s ease-in;
 }
 
 #userProfileName {

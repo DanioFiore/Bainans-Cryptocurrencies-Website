@@ -1,6 +1,6 @@
 <x-layout>
     {{-- title container start --}}
-    <div class="container">
+    <div class="container loginPageAnimation">
         <div class="row justify-content-center">
             <div class="col-6">
                 <h2>Login</h2>
@@ -11,7 +11,7 @@
     {{-- title container end --}}
 
     {{-- login form start --}}
-    <div class="container">
+    <div class="container loginPageAnimation">
         <div class="row justify-content-center">
             <div class="col-6">
                 <form action="{{route('login')}}" method="POST">
