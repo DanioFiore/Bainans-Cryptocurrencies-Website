@@ -183,6 +183,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         WisdomDiala\Cryptocap\Providers\CryptocapServiceProvider::class,
+        Illuminate\Auth\AuthServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -198,6 +199,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
 
     ],
 
@@ -215,7 +217,8 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'Cryptocap' => WisdomDiala\Cryptocap\Facades\Cryptocap::class,
-    ])->toArray(),
+        ])->toArray(),
+        'Auth' => Illuminate\Support\Facades\Auth::class,
     
 
 ];

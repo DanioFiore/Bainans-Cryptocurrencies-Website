@@ -11,18 +11,18 @@ class ProfileController extends Controller
         return view('profile');
     }
 
-    public function store(Request $request) {
+    public function update(Request $request) {
 
         // dd($request->all());
         if($request->hasFile('picture')) {
-            Auth::user()->profile()->create([
+            Auth::user()->profile()->update([
                 'country'=>$request->input('country'),
                 'city'=>$request->input('city'),
                 'phone'=>$request->input('phone'),
                 'picture'=>$request->file('picture')->store('public'),
             ]);
         } else {
-            Auth::user()->profile()->create([
+            Auth::user()->profile()->update([
                 'country'=>$request->input('country'),
                 'city'=>$request->input('city'),
                 'phone'=>$request->input('phone'),

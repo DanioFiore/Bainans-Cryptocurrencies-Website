@@ -10,11 +10,12 @@
     <div class="container profilePageAnimation">
         <div class="row justify-content-center">
             <div class="col-6">
-                <form action="{{route('profile.store')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('profile.update')}}" method="POST" enctype="multipart/form-data">
+                    @method('PUT')
                     @csrf
                     <div class="mb-3">
                         <label for="pictureProfile" class="form-label text-warning">Picture</label>
-                        <img src="{{Auth::user()->profile ? Storage::url(Auth::user()->profile->picture) :  Storage::url('public/defaultUserPicture.webp')}}" alt="" style="height: 100px" class="d-block mb-3">
+                        <img src="{{Auth::user()->profile->picture==Storage::url('public/defaultUserPicture.webp') ? Auth::user()->profile->picture : Storage::url(Auth::user()->profile->picture)}}" alt="" style="height: 100px" class="d-block mb-3">
                         <input type="file" class="form-control" name="picture">
                     </div>
                     <div class="mb-3">
@@ -28,8 +29,8 @@
                     <div class="mb-3">
                         <label for="inputPhoneProfile" class="form-label text-warning">Phone:</label>
                         <input type="text" class="form-control" id="inputPhoneProfile" name="phone" value="{{Auth::user()->profile ? Auth::user()->profile->phone : ''}}">
-                      </div>
-                    <button type="submit" class="btn btn-outline-warning">Submit</button>
+                    </div>
+                    <button type="submit" class="btn btn-outline-warning">Save</button>
                 </form>
             </div>
         </div>

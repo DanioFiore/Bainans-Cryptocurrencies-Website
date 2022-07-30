@@ -32,6 +32,23 @@
                         <input type="text" class="form-control" id="nameInput" name="name">
                     </div>
                     <div class="mb-3">
+                        <label for="pictureProfile" class="form-label text-warning">Picture</label>
+                        <img src="{{Storage::url('public/defaultUserPicture.webp')}}" alt="" style="height: 100px" class="d-block mb-3">
+                        <input type="file" class="form-control" name="picture">
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputCountryProfile" class="form-label text-warning">Country:</label>
+                      <input type="text" class="form-control" id="inputCountryProfile" name="country">
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputCityProfile" class="form-label text-warning">City:</label>
+                      <input type="text" class="form-control" id="inputCityProfile" name="city">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPhoneProfile" class="form-label text-warning">Phone:</label>
+                        <input type="text" class="form-control" id="inputPhoneProfile" name="phone">
+                    </div>
+                    <div class="mb-3">
                         <label for="emailInput" class="form-label text-warning">
                             Email address
                         </label>
@@ -50,12 +67,7 @@
                         </label>
                         <input type="password" class="form-control" id="passwordRepeatInput" name="password_confirmation">
                     </div>
-                    
-                    {{-- <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label text-warning" for="exampleCheck1">I accept privacy terms</label>
-                    </div> --}}
-                      <button type="submit" class="btn btn-outline-warning">Register</button>
+                    <button type="submit" class="btn btn-outline-warning">Register</button>
                 </form>
             </div>
         </div>

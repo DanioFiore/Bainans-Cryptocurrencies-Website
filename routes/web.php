@@ -20,4 +20,4 @@ Route::get('/contactUs', [PublicController::class, 'contactUs'])->name('contactU
 Route::post('/contactUs/submit', [PublicController::class, 'contactSubmit'])->name('contactSubmit');
 Route::get('/cryptocurrencies', [PublicController::class, 'cryptocurrencies'])->name('cryptocurrencies');
 Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
-Route::post('profile/store', [ProfileController::class, 'store'])->name('profile.store');
+Route::put('profile/update', [ProfileController::class, 'update'])->name('profile.update');
