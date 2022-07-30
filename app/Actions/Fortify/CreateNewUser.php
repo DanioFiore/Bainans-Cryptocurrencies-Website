@@ -40,7 +40,6 @@ class CreateNewUser implements CreatesNewUsers
         ]);
 
         $user->profile()->create([
-            'picture'=>$input['picture'],
             'country'=>$input['country'],
             'city'=>$input['city'],
             'phone'=>$input['phone'],

@@ -69,8 +69,9 @@
                     @auth
                     <li class="nav-item me-4">
                         <span class="text-white">Hi, </span>
-                        <a href="{{route('profile')}}" id="userProfileName" class="text-white"> {{Auth::user()->name}} </a>
+                        <a href="{{route('profile')}}" id="userProfileName" class="text-white"> {{Auth::user()->name}} <img src="{{Auth::user()->profile->picture==Storage::url('public/defaultUserPicture.webp') ? Auth::user()->profile->picture : Storage::url(Auth::user()->profile->picture)}}" alt="" style="height: 40px; width: 40px; border-radius: 20px"></a>
                     </li>
+                    
                     <li class="nav-item me-4">
                         <form action="{{route('logout')}}" method="POST">
                             @csrf

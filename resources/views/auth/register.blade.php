@@ -31,11 +31,11 @@
                         </label>
                         <input type="text" class="form-control" id="nameInput" name="name">
                     </div>
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <label for="pictureProfile" class="form-label text-warning">Picture</label>
                         <img src="{{Storage::url('public/defaultUserPicture.webp')}}" alt="" style="height: 100px" class="d-block mb-3">
                         <input type="file" class="form-control" name="picture">
-                    </div>
+                    </div> --}}
                     <div class="mb-3">
                       <label for="inputCountryProfile" class="form-label text-warning">Country:</label>
                       <input type="text" class="form-control" id="inputCountryProfile" name="country">

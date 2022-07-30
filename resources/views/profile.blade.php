@@ -3,7 +3,8 @@
     <div class="container profilePageAnimation">
         <div class="row justify-content-center">
             <div class="col-6">
-                <h2>Adding some extra information about you</h2>
+                <h2>Hi, {{Auth::user()->name}}</h2>
+                <h3>Adding some extra information about you</h3>
             </div>
         </div>
     </div>
@@ -15,7 +16,7 @@
                     @csrf
                     <div class="mb-3">
                         <label for="pictureProfile" class="form-label text-warning">Picture</label>
-                        <img src="{{Auth::user()->profile->picture==Storage::url('public/defaultUserPicture.webp') ? Auth::user()->profile->picture : Storage::url(Auth::user()->profile->picture)}}" alt="" style="height: 100px" class="d-block mb-3">
+                        <img src="{{Auth::user()->profile->picture==Storage::url('public/defaultUserPicture.webp') ? Auth::user()->profile->picture : Storage::url(Auth::user()->profile->picture)}}" alt="" style="height: 100px; width: 100px; border-radius: 50px" class="d-block mb-3">
                         <input type="file" class="form-control" name="picture">
                     </div>
                     <div class="mb-3">
