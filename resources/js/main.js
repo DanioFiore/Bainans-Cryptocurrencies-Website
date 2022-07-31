@@ -17,7 +17,7 @@ togglerButton.addEventListener('click', ()=> {
 // intersection observer counter
 let targetCounterId = document.querySelector('#counterId')
 
-function handleIntersection(entries) {
+function intersectionFadeUpAnimation(entries) {
     entries.map((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.remove('opacity-0')
@@ -27,7 +27,7 @@ function handleIntersection(entries) {
 }
 
 
-let observerCounterShow = new IntersectionObserver(handleIntersection);
+let observerCounterShow = new IntersectionObserver(intersectionFadeUpAnimation);
 observerCounterShow.observe(targetCounterId)
 
 // create the counter
@@ -104,10 +104,77 @@ function showCounter3(entries) {
 const observerCounterStart3 = new IntersectionObserver(showCounter3);
 observerCounterStart3.observe(counterH4third);
 
+
 // Crypto Home table intersection observer
 let cryptoHomeTable = document.querySelector('#cryptoHomeTable')
-let cryptoHomeTableObserver = new IntersectionObserver(handleIntersection)
+let cryptoHomeTableObserver = new IntersectionObserver(intersectionFadeUpAnimation)
 cryptoHomeTableObserver.observe(cryptoHomeTable)
+
+// team member card intersection observer
+let teamCardAnimation = document.querySelector('#teamCardAnimation')
+
+let observerTeamCard = new IntersectionObserver(intersectionFadeUpAnimation)
+observerTeamCard.observe(teamCardAnimation)
+
+// team member skills intersection observer
+let teamSkills = document.querySelector('#teamSkills');
+
+function intersectionFadeLeftAnimation(entries) {
+    entries.map((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0')
+            entry.target.style.animation = 'fadeLeft 1s'
+        }
+    })
+}
+
+let observerTeamSkills = new IntersectionObserver(intersectionFadeLeftAnimation);
+observerTeamSkills.observe(teamSkills);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // remove Successfull sending email div
 let flashDivShow = document.querySelector('#flashDivShow')
@@ -117,25 +184,8 @@ closeFlashButton.addEventListener('click', ()=> {
     flashDivShow.style = "visibility: hidden";
 })
 
-// show more crypto button
-let showMoreCryptoButton = document.querySelector('#showMoreCryptoButton')
-let cryptoTableAll = document.querySelector('#cryptoTableAll')
-
-// team member card intersection observer
-let teamCardAnimation = document.querySelector('#teamCardAnimation');
-
-function showTeamCard(entries) {
-    entries.map((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.remove('opacity-0')
-            entry.target.style.animation = 'fadeUp 1s'
-        }
-    })
-}
 
 
-let observerTeamCard = new IntersectionObserver(showTeamCard);
-observerTeamCard.observe(teamCardAnimation)
 
 
 

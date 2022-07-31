@@ -204,7 +204,7 @@
         </div>
     </div>
     
-    <div class="container">
+    <div id="teamSkills" class="container opacity-0">
         <div class="row">
             <div class="col-12 d-flex flex-column align-items-center">
                 <h5>Programming Language</h5>
