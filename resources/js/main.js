@@ -115,10 +115,27 @@ let closeFlashButton = document.querySelector('#closeFlashButton')
 
 closeFlashButton.addEventListener('click', ()=> {
     flashDivShow.style = "visibility: hidden";
-    console.log(flashDivShow)
 })
 
 // show more crypto button
 let showMoreCryptoButton = document.querySelector('#showMoreCryptoButton')
 let cryptoTableAll = document.querySelector('#cryptoTableAll')
+
+// team member card intersection observer
+let teamCardAnimation = document.querySelector('#teamCardAnimation');
+
+function showTeamCard(entries) {
+    entries.map((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0')
+            entry.target.style.animation = 'fadeUp 1s'
+        }
+    })
+}
+
+
+let observerTeamCard = new IntersectionObserver(showTeamCard);
+observerTeamCard.observe(teamCardAnimation)
+
+
 

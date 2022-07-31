@@ -187,5 +187,48 @@
         </div>
     </div>
     @endguest
+    {{-- start now link end --}}
+
+    {{-- our team start --}}
+    <div id="teamCardAnimation" class="opacity-0">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 d-flex flex-column align-items-center">
+                    <h3>Our Team</h3>
+                    <img src="/img/Senza.jpeg" alt="member team picture" style="height: 464px; width: 346px;">
+                    <h4 class="mt-3">Danio Fiore</h4>
+                    <p>Jr. Full-Stack Developer</p>
+                    <p>"Searching for my first web developer job experience"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-column align-items-center">
+                <h5>Programming Language</h5>
+                <div class="d-flex mt-2">
+                    <ul class="text-white">
+                        <h6>Front-End:</h6>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Javascript</li>
+                        <li>Vue.js - In progress</li>
+                        <li>React.js - In progress</li>
+                        <li>Node.js</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                    <ul class="text-white">
+                        <h6>Back-End:</h6>
+                        <li>PHP</li>
+                        <li>Laravel</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- our team end --}}
     
 </x-layout>
