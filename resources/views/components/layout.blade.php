@@ -56,7 +56,7 @@
                 </li>
                 </ul>
                 <ul class="navbar-nav mb-2 mb-md-0 d-flex align-items-center">
-                    {{-- @if(Auth::user() == NULL) --}}
+                    {{-- guest --}}
                     @guest
                     <li class="nav-item">
                         <a href="{{route('register')}}" class="nav-link">
@@ -69,12 +69,21 @@
                         </a>
                     </li>
                     @endguest
+
+                    {{-- user --}}
                     @auth
                     <li class="nav-item me-4">
                         <span class="text-white">Hi, </span>
                         <a href="{{route('profile')}}" id="userProfileName" class="text-white"> {{Auth::user()->name}} <img src="{{Auth::user()->profile->picture==Storage::url('public/defaultUserPicture.webp') ? Auth::user()->profile->picture : Storage::url(Auth::user()->profile->picture)}}" alt="" style="height: 40px; width: 40px; border-radius: 20px"></a>
                     </li>
-                    
+
+                    {{-- writer --}}
+                    @if (Auth::user()->is_writer)
+                        <li class="nav-item me-4">
+                            <a href="{{route('writerPage')}}" class="btn btn-outline-success">Write an Article</a>
+                        </li>
+                    @endif
+
                     <li class="nav-item me-4">
                         <form action="{{route('logout')}}" method="POST">
                             @csrf
@@ -90,7 +99,7 @@
     </nav>
     {{-- navbar end --}}
 
-    <div class="everything">
+    <div class="everything min-vh-100">
         {{$slot}}
     </div>
 
