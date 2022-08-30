@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 
+    {{-- bootstrap icons cdn --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
     <title>{{isset($title) ? $title : 'Bainans'}}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -101,7 +104,8 @@
         
     
         <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="{{route('homepage')}}" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="{{route('faq')}}" class="nav-link px-2 text-muted">FAQs</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
         </ul>
       </footer>

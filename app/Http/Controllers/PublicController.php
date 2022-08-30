@@ -41,4 +41,8 @@ class PublicController extends Controller
         $cryptos = Cryptocap::getAssetsWithLimit(30)->data;
         return view('cryptocurrencies', compact('cryptos'));
     }
+
+    public function faq() {
+        return view('faq');
+    }
 }

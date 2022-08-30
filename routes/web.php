@@ -21,3 +21,4 @@ Route::post('/contactUs/submit', [PublicController::class, 'contactSubmit'])->na
 Route::get('/cryptocurrencies', [PublicController::class, 'cryptocurrencies'])->name('cryptocurrencies');
 Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
 Route::put('profile/update', [ProfileController::class, 'update'])->name('profile.update');
+Route::get('/faq', [PublicController::class, 'faq'])->name('faq');

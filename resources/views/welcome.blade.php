@@ -231,4 +231,71 @@
     </div>
     {{-- our team end --}}
     
+    {{-- help start --}}
+    <div class="container mt-5">
+        <div class="row div col-12">
+            <h3>
+                Need help?
+            </h3>
+        </div>
+    </div>
+
+    <div class="container mt-3 bg-secondary border border-warning border-2 p-3">
+        <div class="row align-items-center">
+            {{-- first col --}}
+            <div class="col-4 d-flex align-items-center justify-content-between">
+                <div class="me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentFill" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                </div>
+                <div>
+                    <h5>
+                        Clients Assistant 24/7
+                    </h5>
+                    <p>
+                        For all our clients, we grants a support everyday, everytime.
+                    </p>
+                    <a href="">Chat with us</a>
+                </div>
+            </div>
+
+            {{-- second col --}}
+            <div class="col-4 d-flex align-items-center justify-content-between">
+                <div class="me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-question-square-fill" viewBox="0 0 16 16">
+                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.496 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z"/>
+                      </svg>
+                </div>
+                <div>
+                    <h5>
+                        FAQ
+                    </h5>
+                    <p>
+                        Read the answer for our frequent asked question.
+                    </p>
+                    <a href="{{route('faq')}}">Read now</a>
+                </div>
+            </div>
+
+            {{-- third col --}}
+            <div class="col-4 d-flex align-items-center justify-content-between">
+                <div class="me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                        <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                        <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                        </svg>
+                </div>
+                <div>
+                    <h5>
+                        Blog
+                    </h5>
+                    <p>
+                        Discover our latest news about the Crypto World
+                    </p>
+                    <a href="">Yea, discover.</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </x-layout>
