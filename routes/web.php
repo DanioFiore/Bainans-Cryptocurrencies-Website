@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\WriterController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -38,4 +39,4 @@ Route::put('profile/update', [ProfileController::class, 'update'])->name('profil
 Route::get('/faq', [PublicController::class, 'faq'])->name('faq');
 
 // Writer page route
-Route::get('writer/write-article', [WriterController::class, 'writerPage'])->name('writerPage');
+Route::get('writer/write-article', [ArticleController::class, 'writePage'])->name('writer.writePage');

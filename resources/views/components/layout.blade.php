@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <title>{{isset($title) ? $title : 'Bainans'}}</title>
+    @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
@@ -80,7 +81,7 @@
                     {{-- writer --}}
                     @if (Auth::user()->is_writer)
                         <li class="nav-item me-4">
-                            <a href="{{route('writerPage')}}" class="btn btn-outline-success">Write an Article</a>
+                            <a href="{{route('writer.writePage')}}" class="btn btn-outline-success">Write an Article</a>
                         </li>
                     @endif
 
@@ -120,5 +121,6 @@
       </footer>
       {{-- footer end --}}
     
+    @livewireScripts
 </body>
 </html>
