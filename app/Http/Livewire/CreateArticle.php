@@ -4,15 +4,18 @@ namespace App\Http\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use App\Models\Category;
 
 class CreateArticle extends Component
 {
     public $title;
     public $body;
+    public $category;
 
     protected $rules = [
         'title' => 'required | min: 3',
         'body' => 'required | min: 8',
+        'category' => 'required',
     ];
 
     protected $messages = [
@@ -22,7 +25,8 @@ class CreateArticle extends Component
 
     public function store()
     {
-        Article::create([
+        $category = Category::find($this->category);
+        $category->articles()->create([
             'title'=>$this->title,
             'body'=>$this->body,
         ]);
@@ -39,6 +43,7 @@ class CreateArticle extends Component
     {
         $this->title = '';
         $this->body = '';
+        $this->category = '';
     }
 
     public function render()
