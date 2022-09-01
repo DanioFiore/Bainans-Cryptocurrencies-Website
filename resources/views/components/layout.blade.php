@@ -116,10 +116,11 @@
         <ul class="nav col-md-4 justify-content-end">
           <li class="nav-item"><a href="{{route('homepage')}}" class="nav-link px-2 text-muted">Home</a></li>
           <li class="nav-item"><a href="{{route('faq')}}" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="{{route('workWithUs')}}" class="nav-link px-2 text-muted">Join our Team</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
         </ul>
       </footer>
-      {{-- footer end --}}
+    {{-- footer end --}}
     
     @livewireScripts
 </body>

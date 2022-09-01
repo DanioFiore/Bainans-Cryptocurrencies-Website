@@ -9,6 +9,18 @@
         </div>
     @endif
 
+    @if(session()->has('access.denied'))
+        <div class="flex flex-row justify-center my-2 alert alert-danger">
+            {{session('access.denied')}}
+        </div>
+    @endif
+
+    @if(session()->has('message'))
+        <div class="flex flex-row justify-center my-2 alert alert-danger">
+            {{session('message')}}
+        </div>
+    @endif
+
     {{-- title start --}}
     <div id="title">
         <h1 class="text-center" id="homePageH1">

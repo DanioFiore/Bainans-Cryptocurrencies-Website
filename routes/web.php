@@ -30,13 +30,22 @@ Route::post('/contactUs/submit', [PublicController::class, 'contactSubmit'])->na
 Route::get('/cryptocurrencies', [PublicController::class, 'cryptocurrencies'])->name('cryptocurrencies');
 
 // Profile route
-Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
+Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 
 // Profile update route
-Route::put('profile/update', [ProfileController::class, 'update'])->name('profile.update');
+Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
 // FAQ route
 Route::get('/faq', [PublicController::class, 'faq'])->name('faq');
 
+// Work with us route
+Route::get('/work-with-us', [WriterController::class, 'workWithUs'])->middleware('auth')->name('workWithUs');
+
+// Become a writer button
+Route::get('/request/writer', [WriterController::class, 'becomeWriter'])->middleware('auth')->name('become.writer');
+
+// Make user writer
+Route::get('/make/writer/{user}', [WriterController::class, 'makeWriter'])->name('make.writer');
+
 // Writer page route
-Route::get('writer/write-article', [ArticleController::class, 'writePage'])->middleware('auth')->name('writer.writePage');
+Route::get('/writer/write-article', [WriterController::class, 'writePage'])->middleware('isWriter')->name('writer.writePage');
