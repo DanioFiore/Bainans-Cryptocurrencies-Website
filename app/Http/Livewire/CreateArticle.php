@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class CreateArticle extends Component
 {
@@ -26,10 +27,11 @@ class CreateArticle extends Component
     public function store()
     {
         $category = Category::find($this->category);
-        $category->articles()->create([
+        $article = $category->articles()->create([
             'title'=>$this->title,
             'body'=>$this->body,
         ]);
+        Auth::user()->articles()->save($article);
         session()->flash('message', 'Article successfully created!');
         $this->clearForm();
     }
