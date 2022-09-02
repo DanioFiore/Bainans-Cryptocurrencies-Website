@@ -47,13 +47,13 @@
                             <h5 class="card-title">
                                 {{$article->title}}
                             </h5>
-                            <a href="">
+                            <a href="{{route('categoryShow', ['category'=>$article->category])}}">
                                 Category: {{$article->category->name}}
                             </a>
                             <p class="text-black">
                                 Date: {{$article->created_at->format('d/m/Y')}}
                             </p>
-                            <a href="#" class="btn btn-primary">
+                            <a href="{{route('articles.show', compact('article'))}}" class="btn btn-primary">
                                 Read more
                             </a>
                         </div>

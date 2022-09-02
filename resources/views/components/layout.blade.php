@@ -54,18 +54,21 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="categoriesDropwodn" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
-                        Articles by Category
+                        Articles
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                        <li>
+                            <a href="{{route('articles.index')}}" class="dropdown-item">
+                                All
+                            </a>
+                        </li>
                         @foreach($categories as $category)
                             <li>
                                 <a href="{{route('categoryShow', compact('category'))}}" class="dropdown-item">
                                     {{$category->name}}
                                 </a>
                             </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                            
                         @endforeach
                     </ul>
                 </li>

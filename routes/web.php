@@ -52,3 +52,10 @@ Route::get('/writer/write-article', [WriterController::class, 'writePage'])->mid
 
 // Category show route
 Route::get('/category/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
+
+// All articles route
+Route::get('all/articles', [ArticleController::class, 'indexArticle'])->middleware('auth')->name('articles.index');
+
+// Article details
+Route::get('/reading/article/{article}', [ArticleController::class, 'showArticle'])->middleware('auth')->name('articles.show');
+
