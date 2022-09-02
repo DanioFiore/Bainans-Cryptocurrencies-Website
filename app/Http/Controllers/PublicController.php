@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+use App\Models\Category;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +21,8 @@ class PublicController extends Controller
         // Cryptocap::getSingleAsset('binance-coin');
         // Cryptocap::getSingleAsset('binance-usd');
         $cryptos = Cryptocap::getAssetsWithLimit(5)->data;
-        return view('welcome', compact('cryptos'));
+        $articles = Article::take(3)->get()->sortByDesc('created_at');
+        return view('welcome', compact('cryptos'), compact('articles'));
     }
 
     public function contactUs() {
@@ -45,5 +48,9 @@ class PublicController extends Controller
 
     public function faq() {
         return view('faq');
+    }
+
+    public function categoryShow(Category $category) {
+        return view('categoryShow', compact('category'));
     }
 }

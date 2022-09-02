@@ -16,7 +16,7 @@
     @endif
 
     @if(session()->has('message'))
-        <div class="flex flex-row justify-center my-2 alert alert-danger">
+        <div class="flex flex-row justify-center my-2 alert">
             {{session('message')}}
         </div>
     @endif
@@ -36,31 +36,33 @@
     {{-- title end --}}
     
 
-    {{-- carousel start --}}
-    <div class="container-fluid mt-5">
-        <div class="row justify-content-center">
-            <div id="carouselExampleCaptions" class="carousel slide w-50" data-bs-ride="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/img/btc2.png" class="d-block w-100" alt="bitcoin">
+    {{-- article start --}}
+    <div class="container">
+        <div class="row">
+            @foreach ($articles as $article)
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                {{$article->title}}
+                            </h5>
+                            <a href="">
+                                Category: {{$article->category->name}}
+                            </a>
+                            <p class="text-black">
+                                Date: {{$article->created_at->format('d/m/Y')}}
+                            </p>
+                            <a href="#" class="btn btn-primary">
+                                Read more
+                            </a>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="/img/eth.png" class="d-block w-100" alt="ethereum">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/terra.png" class="d-block w-100" alt="terra">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
+                </div>  
+            @endforeach
         </div>
     </div>
-    {{-- carousel end --}}
+    {{-- article end --}}
 
     {{-- counters start --}}
     <div id="counterId" class="mt-5 opacity-0">
@@ -131,7 +133,6 @@
             </div>
         </div>
     </div>
-    
     {{-- table crypto end --}}
 
     {{-- start now link start --}}
@@ -182,7 +183,7 @@
                         <h6>Back-End:</h6>
                         <li>PHP</li>
                         <li>Laravel</li>
-                        <li>MySQL</li>
+                        <li>MySQL | SQL</li>
                     </ul>
                 </div>
             </div>
@@ -204,9 +205,9 @@
             {{-- first col --}}
             <div class="col-4 d-flex align-items-center justify-content-between">
                 <div class="me-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentFill" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"/>
-                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg>
                 </div>
                 <div>
                     <h5>
@@ -215,7 +216,7 @@
                     <p>
                         For all our clients, we grants a support everyday, everytime.
                     </p>
-                    <a href="">Chat with us</a>
+                    <a href="{{route('contactUs')}}">Contact us</a>
                 </div>
             </div>
 
@@ -257,4 +258,5 @@
             </div>
         </div>
     </div>
+    {{-- help end --}}
 </x-layout>

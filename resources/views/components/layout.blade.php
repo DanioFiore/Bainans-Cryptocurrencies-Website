@@ -52,8 +52,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('cryptocurrencies')}}">Cryptocurrencies</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('contactUs')}}">Contact Us</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="categoriesDropwodn" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                        Articles by Category
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                        @foreach($categories as $category)
+                            <li>
+                                <a href="{{route('categoryShow', compact('category'))}}" class="dropdown-item">
+                                    {{$category->name}}
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        @endforeach
+                    </ul>
                 </li>
                 </ul>
                 <ul class="navbar-nav mb-2 mb-md-0 d-flex align-items-center">
