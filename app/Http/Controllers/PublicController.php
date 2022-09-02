@@ -14,11 +14,12 @@ class PublicController extends Controller
     public function home() {
         // dd(Auth::user());
         // dd(Cryptocap::getAssets());
-        Cryptocap::getSingleAsset('bitcoin');
-        Cryptocap::getSingleAsset('ethereum');
-        Cryptocap::getSingleAsset('binance-coin');
-        Cryptocap::getSingleAsset('binance-usd');
-        return view('welcome');
+        // Cryptocap::getSingleAsset('bitcoin');
+        // Cryptocap::getSingleAsset('ethereum');
+        // Cryptocap::getSingleAsset('binance-coin');
+        // Cryptocap::getSingleAsset('binance-usd');
+        $cryptos = Cryptocap::getAssetsWithLimit(5)->data;
+        return view('welcome', compact('cryptos'));
     }
 
     public function contactUs() {

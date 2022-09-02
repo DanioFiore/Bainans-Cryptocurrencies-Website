@@ -106,79 +106,26 @@
                             <th class="text-warning" scope="col">Symbol</th>
                         </tr>
                     </thead>
-                    <tbody id="data">
-                        <tr>
-                            <td class="text-white">
-                                <img class="cryptoTableLogo" src="/img/bitcoin-logo.webp" alt="bitcoin logo">
-                                {{ Cryptocap::getSingleAsset('bitcoin')->data->name }}
-                            </td>
-                            <td class="text-white">
-                                {{ number_format(Cryptocap::getSingleAsset('bitcoin')->data->priceUsd, 2)}}
-                            </td>
-                            <td class="text-white">
-                                {{ number_format(Cryptocap::getSingleAsset('bitcoin')->data->vwap24Hr, 2) }}
-                            </td>
-                            <td class="text-white">
-                                {{ Cryptocap::getSingleAsset('bitcoin')->data->rank }}
-                            </td>
-                            <td class="text-white">
-                                {{ Cryptocap::getSingleAsset('bitcoin')->data->symbol }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-white">
-                                <img class="cryptoTableLogo" src="/img/ethereum-logo-2.webp" alt="ethereum logo">
-                                {{ Cryptocap::getSingleAsset('ethereum')->data->name }}
-                            </td>
-                            <td class="text-white">
-                                {{ number_format(Cryptocap::getSingleAsset('ethereum')->data->priceUsd, 2)}}
-                            </td>
-                            <td class="text-white">
-                                {{ number_format(Cryptocap::getSingleAsset('ethereum')->data->vwap24Hr, 2) }}
-                            </td>
-                            <td class="text-white">
-                                {{ Cryptocap::getSingleAsset('ethereum')->data->rank }}
-                            </td>
-                            <td class="text-white">
-                                {{ Cryptocap::getSingleAsset('ethereum')->data->symbol }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-white">
-                                <img class="cryptoTableLogo" src="/img/bnb-logo.webp" alt="bitcoin logo">
-                                {{ Cryptocap::getSingleAsset('binance-coin')->data->name }}
-                            </td>
-                            <td class="text-white">
-                                {{ number_format(Cryptocap::getSingleAsset('binance-coin')->data->priceUsd, 2)}}
-                            </td>
-                            <td class="text-white">
-                                {{ number_format(Cryptocap::getSingleAsset('binance-coin')->data->vwap24Hr, 2) }}
-                            </td>
-                            <td class="text-white">
-                                {{ Cryptocap::getSingleAsset('binance-coin')->data->rank }}
-                            </td>
-                            <td class="text-white">
-                                {{ Cryptocap::getSingleAsset('binance-coin')->data->symbol }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-white">
-                                <img class="cryptoTableLogo" src="/img/busd-logo.webp" alt="bitcoin logo">
-                                {{ Cryptocap::getSingleAsset('binance-usd')->data->name }}
-                            </td>
-                            <td class="text-white">
-                                {{ number_format(Cryptocap::getSingleAsset('binance-usd')->data->priceUsd, 2)}}
-                            </td>
-                            <td class="text-white">
-                                {{ number_format(Cryptocap::getSingleAsset('binance-usd')->data->vwap24Hr, 2) }}
-                            </td>
-                            <td class="text-white">
-                                {{ Cryptocap::getSingleAsset('binance-usd')->data->rank }}
-                            </td>
-                            <td class="text-white">
-                                {{ Cryptocap::getSingleAsset('binance-usd')->data->symbol }}
-                            </td>
-                        </tr>
+                    <tbody>
+                        @foreach($cryptos as $crypto)
+                            <tr>
+                                <td class="text-white">
+                                    {{ $crypto->name }};
+                                </td>
+                                <td class="text-white">
+                                    {{ number_format($crypto->priceUsd, 2)}}
+                                </td>
+                                <td class="text-white">
+                                    {{ number_format($crypto->vwap24Hr, 2) }}
+                                </td>
+                                <td class="text-white">
+                                    {{ $crypto->rank }}
+                                </td>
+                                <td class="text-white">
+                                    {{ $crypto->symbol }}
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
