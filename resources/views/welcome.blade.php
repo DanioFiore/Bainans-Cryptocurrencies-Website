@@ -253,7 +253,7 @@
                     <p>
                         Discover our latest news about the Crypto World
                     </p>
-                    <a href="">Yea, discover.</a>
+                    <a href="{{route('articles.index')}}">Yea, discover.</a>
                 </div>
             </div>
         </div>

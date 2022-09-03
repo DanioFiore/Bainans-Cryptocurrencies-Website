@@ -114,7 +114,10 @@ h1 {
     height: 32px;
 }
 
-
+.img-preview {
+    height: 300px;
+    width: 300px;
+}
 
 /* Breakpoints */
 @media (min-width: 500px){
