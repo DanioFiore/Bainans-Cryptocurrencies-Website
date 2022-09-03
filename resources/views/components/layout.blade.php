@@ -73,6 +73,12 @@
                     </ul>
                 </li>
                 </ul>
+                {{-- searchbar start --}}
+                <form action="{{route('articles.search')}}" method="GET" class="d-flex">
+                    <input type="search" name="searched" class="form-control me-2" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning" type="submit">Search</button>
+                </form>
+                {{-- searchbar end --}}
                 <ul class="navbar-nav mb-2 mb-md-0 d-flex align-items-center">
                     {{-- guest --}}
                     @guest

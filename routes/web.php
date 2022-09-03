@@ -59,3 +59,6 @@ Route::get('all/articles', [ArticleController::class, 'indexArticle'])->middlewa
 // Article details
 Route::get('/reading/article/{article}', [ArticleController::class, 'showArticle'])->middleware('auth')->name('articles.show');
 
+// Search articles
+Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('articles.search');
+

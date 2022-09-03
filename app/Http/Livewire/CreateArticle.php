@@ -17,7 +17,6 @@ class CreateArticle extends Component
     public $category;
     public $temporary_images;
     public $images = [];
-    public $image;
 
     protected $rules = [
         'title' => 'required | min: 3',
@@ -68,7 +67,6 @@ class CreateArticle extends Component
         $this->category = '';
         $this->images = [];
         $this->temporary_images = [];
-        $this->form_id = rand();
     }
 
     public function render()

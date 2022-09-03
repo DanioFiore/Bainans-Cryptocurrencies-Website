@@ -53,4 +53,11 @@ class PublicController extends Controller
     public function categoryShow(Category $category) {
         return view('categoryShow', compact('category'));
     }
+
+    public function searchArticles(Request $request) {
+        $articles = Article::search($request->searched)->paginate(10);
+
+        return view('articles.index', compact('articles'));
+    }
 }
+ 
