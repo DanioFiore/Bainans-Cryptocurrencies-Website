@@ -1,6 +1,6 @@
 <x-layout>
     
-    <x-slot name="title">Bainans - Home</x-slot>
+    <x-slot name="title">{{__('ui.tabTitle')}}</x-slot>
 
     @if (session('flash'))
         <div id="flashDivShow" class="alert alert-success d-flex justify-content-between" style="margin-top: 50px">
@@ -24,13 +24,13 @@
     {{-- title start --}}
     <div id="title">
         <h1 class="text-center" id="homePageH1">
-            B A I N A N S
+            {{__('ui.title')}}
         </h1>
         <h2 class="text-center" id="homePageH2Title">
-            We believe in Cryptocurrencies.
+            {{__('ui.weBelieveInCrypto')}}
         </h2>
         <h6 class="text-center" id="homePageH6Title">
-            (Even in the Bear Market)
+            {{__('ui.evenIn')}}
         </h6>
     </div>
     {{-- title end --}}
@@ -48,13 +48,13 @@
                                 {{$article->title}}
                             </h5>
                             <a href="{{route('categoryShow', ['category'=>$article->category])}}">
-                                Category: {{$article->category->name}}
+                                {{__('ui.cardCategory')}} {{$article->category->name}}
                             </a>
                             <p class="text-black">
-                                Date: {{$article->created_at->format('d/m/Y')}}
+                                {{__('cardDate')}} {{$article->created_at->format('d/m/Y')}}
                             </p>
                             <a href="{{route('articles.show', compact('article'))}}" class="btn btn-primary">
-                                Read more
+                                {{__('ui.cardReadMoreButton')}}
                             </a>
                         </div>
                     </div>
@@ -72,21 +72,21 @@
                     <h4 class="counterH4first opacity-0">
                     </h4>
                     <p>
-                        24h trading volume on Bainans exchange
+                        {{__('ui.counterTradingVolume')}}
                     </p>
                 </div>
                 <div class="col-12 col-md-4">
                     <h4 class="counterH4second opacity-0">
                     </h4>
                     <p>
-                        Cryptocurrencies listed
+                        {{__('ui.counterCryptoListed')}}
                     </p>
                 </div>
                 <div class="col-12 col-md-4">
                     <h4 class="counterH4third opacity-0">
                     </h4>
                     <p>
-                        Registered users
+                        {{__('ui.counterRegisteredUsers')}}
                     </p>
                 </div>
             </div>
@@ -101,11 +101,11 @@
                 <table id="cryptoHomeTable" class="table opacity-0">
                     <thead>
                         <tr>
-                            <th class="text-warning" scope="col">Name</th>
-                            <th class="text-warning" scope="col">Price</th>
-                            <th class="text-warning" scope="col">Vwap24h</th>
-                            <th class="text-warning" scope="col">Rank</th>
-                            <th class="text-warning" scope="col">Symbol</th>
+                            <th class="text-warning" scope="col">{{__('ui.homeTableRowName')}}</th>
+                            <th class="text-warning" scope="col">{{__('ui.homeTableRowPrice')}}</th>
+                            <th class="text-warning" scope="col">{{__('ui.homeTableRowVwap')}}</th>
+                            <th class="text-warning" scope="col">{{__('ui.homeTableRowRank')}}</th>
+                            <th class="text-warning" scope="col">{{__('ui.homeTableRowSymbol')}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -140,9 +140,9 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col-6">
-                <h3>Join US to read our latest news about the cryptocurrency world</h3>
-                <h6>Or you'll be a dogecoiner..</h6>
-                <a class="btn btn-outline-warning mt-2" href="{{route('register')}}">Start now.</a>
+                <h3>{{__('ui.joinUsText')}}</h3>
+                <h6>{{__('ui.dogecoinerText')}}</h6>
+                <a class="btn btn-outline-warning mt-2" href="{{route('register')}}">{{__('ui.startNowButton')}}</a>
             </div>
         </div>
     </div>
@@ -154,7 +154,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-12 d-flex flex-column align-items-center">
-                    <h3>Our Team</h3>
+                    <h3>{{__('ui.teamTitle')}}</h3>
                     <img src="/img/Senza.jpeg" alt="member team picture" style="height: 464px; width: 346px;">
                     <h4 class="mt-3">Danio Fiore</h4>
                     <p>Jr. Full-Stack Developer</p>
@@ -195,7 +195,7 @@
     <div class="container mt-5">
         <div class="row div col-12">
             <h3>
-                Need help?
+                {{__('ui.helpTitle')}}
             </h3>
         </div>
     </div>
@@ -211,12 +211,12 @@
                 </div>
                 <div>
                     <h5>
-                        Clients Assistant 24/7
+                        {{__('ui.helpClientAssistantTitle')}}
                     </h5>
                     <p>
-                        For all our clients, we grants a support everyday, everytime.
+                        {{__('ui.helpClientAssistantParagraph')}}
                     </p>
-                    <a href="{{route('contactUs')}}">Contact us</a>
+                    <a href="{{route('contactUs')}}">{{__('ui.helpClientAssistantContact')}}</a>
                 </div>
             </div>
 
@@ -229,12 +229,12 @@
                 </div>
                 <div>
                     <h5>
-                        FAQ
+                        {{__('ui.helpFaqTitle')}}
                     </h5>
                     <p>
-                        Read the answer for our frequent asked question.
+                        {{__('ui.helpFaqParagraph')}}
                     </p>
-                    <a href="{{route('faq')}}">Read now</a>
+                    <a href="{{route('faq')}}">{{__('ui.helpFaqButtonRead')}}</a>
                 </div>
             </div>
 
@@ -248,12 +248,12 @@
                 </div>
                 <div>
                     <h5>
-                        Blog
+                        {{__('ui.helpBlogTitle')}}
                     </h5>
                     <p>
-                        Discover our latest news about the Crypto World
+                        {{__('ui.helpBlogParagraph')}}
                     </p>
-                    <a href="{{route('articles.index')}}">Yea, discover.</a>
+                    <a href="{{route('articles.index')}}">{{__('ui.helpBlogButtonRead')}}</a>
                 </div>
             </div>
         </div>

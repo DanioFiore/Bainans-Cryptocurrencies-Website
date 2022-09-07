@@ -62,3 +62,6 @@ Route::get('/reading/article/{article}', [ArticleController::class, 'showArticle
 // Search articles
 Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('articles.search');
 
+// Language route
+Route::post('/language/{lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');
+
