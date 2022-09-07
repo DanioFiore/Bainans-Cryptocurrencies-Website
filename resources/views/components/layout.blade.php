@@ -104,7 +104,7 @@
                     {{-- writer --}}
                     @if (Auth::user()->is_writer)
                         <li class="nav-item me-4">
-                            <a href="{{route('writer.writePage')}}" class="btn btn-outline-success">{{__('writeArticleButton')}}</a>
+                            <a href="{{route('writer.writePage')}}" class="btn btn-outline-success">{{__('ui.writeArticleButton')}}</a>
                         </li>
                     @endif
 

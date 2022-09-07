@@ -5,8 +5,8 @@
     <div class="container mb-5" style="margin-top: 70px">
         <div class="row">
             <div class="col-12">
-                <h2 id="cryptocurrenciesPageH2" class="text-center">The BEST Cryptocurrencies</h2>
-                <h3 class="text-center">- All in our Exchange -</h3>
+                <h2 id="cryptocurrenciesPageH2" class="text-center">{{__('ui.cryptoPageTitle')}}</h2>
+                <h3 class="text-center">{{__('ui.cryptoPageSubtitle')}}</h3>
             </div>
         </div>
     </div>
@@ -22,11 +22,11 @@
                 <table id="cryptoTableAll" class="table">
                     <thead>
                         <tr>
-                            <th class="text-warning" scope="col">Name</th>
-                            <th class="text-warning" scope="col">Price</th>
-                            <th class="text-warning" scope="col">Vwap24h</th>
-                            <th class="text-warning" scope="col">Rank</th>
-                            <th class="text-warning" scope="col">Symbol</th>
+                            <th class="text-warning" scope="col">{{__('ui.homeTableRowName')}}</th>
+                            <th class="text-warning" scope="col">{{__('ui.homeTableRowPrice')}}</th>
+                            <th class="text-warning" scope="col">{{__('ui.homeTableRowVwap')}}</th>
+                            <th class="text-warning" scope="col">{{__('ui.homeTableRowRank')}}</th>
+                            <th class="text-warning" scope="col">{{__('ui.homeTableRowSymbol')}}</th>
                         </tr>
                     </thead>
                     <tbody>

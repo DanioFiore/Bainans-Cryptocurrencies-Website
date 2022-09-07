@@ -3,8 +3,8 @@
     <div class="container registerPageAnimation">
         <div class="row justify-content-center">
             <div class="col-6">
-                <h2>Register Form</h2>
-                <h4>Be a Bainanser</h4>
+                <h2>{{__('ui.registerTitle')}}</h2>
+                <h4>{{__('ui.registerSubtitle')}}</h4>
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
                     @csrf
                     <div class="mb-3">
                         <label for="nameInput" class="form-label text-warning">
-                            Name and Surname
+                            {{__('ui.registerFormName')}}
                         </label>
                         <input type="text" class="form-control" id="nameInput" name="name">
                     </div>
@@ -37,37 +37,37 @@
                         <input type="file" class="form-control" name="picture">
                     </div> --}}
                     <div class="mb-3">
-                      <label for="inputCountryProfile" class="form-label text-warning">Country:</label>
+                      <label for="inputCountryProfile" class="form-label text-warning">{{__('ui.registerFormCountry')}}</label>
                       <input type="text" class="form-control" id="inputCountryProfile" name="country">
                     </div>
                     <div class="mb-3">
-                      <label for="inputCityProfile" class="form-label text-warning">City:</label>
+                      <label for="inputCityProfile" class="form-label text-warning">{{__('ui.registerFormCity')}}</label>
                       <input type="text" class="form-control" id="inputCityProfile" name="city">
                     </div>
                     <div class="mb-3">
-                        <label for="inputPhoneProfile" class="form-label text-warning">Phone:</label>
+                        <label for="inputPhoneProfile" class="form-label text-warning">{{__('ui.registerFormPhone')}}</label>
                         <input type="text" class="form-control" id="inputPhoneProfile" name="phone">
                     </div>
                     <div class="mb-3">
                         <label for="emailInput" class="form-label text-warning">
-                            Email address
+                            {{__('ui.registerFormEmail')}}
                         </label>
                         <input type="email" class="form-control" id="emailInput" name="email">
-                        <div id="emailHelp" class="form-text text-warning">Your Email is safe with US.</div>
+                        <div id="emailHelp" class="form-text text-warning">{{__('ui.registerFormEmailNotShare')}}</div>
                     </div>
                     <div class="mb-3">
                         <label for="passwordInput" class="form-label text-warning">
-                            Password
+                            {{__('ui.registerFormPassword')}}
                         </label>
                         <input type="password" class="form-control" id="passwordInput" name="password">
                     </div>
                     <div class="mb-3">
                         <label for="passwordRepeatInput" class="form-label text-warning">
-                            Repeat password
+                            {{__('ui.registerFormPasswordRepeat')}}
                         </label>
                         <input type="password" class="form-control" id="passwordRepeatInput" name="password_confirmation">
                     </div>
-                    <button type="submit" class="btn btn-outline-warning">Register</button>
+                    <button type="submit" class="btn btn-outline-warning">{{__('ui.registerFormRegisterButton')}}</button>
                 </form>
             </div>
         </div>

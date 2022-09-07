@@ -4,10 +4,10 @@
         <div class="row justify-content-center">
             <div class="col-6">
                 <h2>
-                    Need help?
+                    {{__('ui.contactTitle')}}
                 </h2>
                 <h3>
-                    Sending us an Email!
+                    {{__('ui.contactSubtitle')}}
                 </h3>
             </div>
         </div>
@@ -20,20 +20,20 @@
                 <form class="mt-4" id="formContactUs" method="POST" action="{{route('contactSubmit')}}">
                     @csrf
                     <div class="mb-3">
-                        <label for="exampleInputName" class="form-label text-warning">Name and Surname</label>
+                        <label for="exampleInputName" class="form-label text-warning">{{__('ui.registerFormName')}}</label>
                         <input name="name" type="text" class="form-control" id="exampleInputName" aria-describedby="nameSurname" required>
                         <div id="nameSurname" class="form-text text-white"></div>
                         </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label text-warning">Email address</label>
+                        <label for="exampleInputEmail1" class="form-label text-warning">{{__('ui.registerFormEmail')}}</label>
                         <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                        <div id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.</div>
+                        <div id="emailHelp" class="form-text text-white">{{__('ui.contactFormNeverShare')}}</div>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputText" class="form-label text-warning">Your text</label>
+                        <label for="exampleInputText" class="form-label text-warning">{{__('ui.contactFormMessage')}}</label>
                         <input name="text" type="text" class="form-control" id="exampleInputText" required>
                     </div>
-                    <button type="submit" class="btn btn-warning">Submit</button>
+                    <button type="submit" class="btn btn-warning">{{__('ui.contactFormButton')}}</button>
                 </form>
             </div>
         </div>

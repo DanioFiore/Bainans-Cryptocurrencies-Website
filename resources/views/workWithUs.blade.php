@@ -9,13 +9,12 @@
                     </div>
                 @endif
                 <h2>
-                    You want to join our team?
+                    {{__('ui.workTitle')}}
                 </h2>
                 <p>
-                    We're excited to meet you. <br>
-                    Click on this button to send a request to become a writer.
+                    {{__('ui.workParagraph')}}
                 </p>
-                <a href="{{route('become.writer')}}" class="btn btn-success">Become a writer!</a>
+                <a href="{{route('become.writer')}}" class="btn btn-success">{{__('ui.workButton')}}</a>
             
             </div>
         </div>

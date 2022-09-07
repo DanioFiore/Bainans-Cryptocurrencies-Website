@@ -1,6 +1,6 @@
 <div>
     <h2>
-        Create an Article, dear Writer.
+        {{__('ui.createArticleTitle')}}
     </h2>
 
     {{-- flash session for article created start --}}
@@ -19,7 +19,7 @@
                     @csrf
                     {{-- input title start --}}
                     <div class="mb-3">
-                        <label class="text-warning" for="title">Title</label>
+                        <label class="text-warning" for="title">{{__('ui.createArticleArticleTitle')}}</label>
                         <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
                         <div class="text-danger">
                             @error('title')
@@ -31,7 +31,7 @@
 
                     {{-- input body start --}}
                     <div class="mb-3">
-                        <label class="text-warning" for="body">Article body</label>
+                        <label class="text-warning" for="body">{{__('ui.createArticleArticleBody')}}</label>
                         <textarea wire:model="body" type="text" class="form-control @error('body') is-invalid @enderror"></textarea>
                         <div class="text-danger">
                             @error('body')
@@ -43,9 +43,9 @@
 
                     {{-- select category start --}}
                     <div class="mb-3">
-                        <label class="text-warning" for="category">Category</label>
+                        <label class="text-warning" for="category">{{__('ui.createArticleArticleCategory')}}</label>
                         <select wire:model.defer="category" id="category" class="form-control">
-                            <option value="">Choose category</option>
+                            <option value="">{{__('ui.createArticleArticleChooseCategory')}}</option>
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
                             @endforeach
@@ -56,7 +56,7 @@
                     {{-- input images start --}}
                     <div class="mb-3">
                         <label for="images" class="text-warning">
-                            Images
+                            {{__('ui.createArticleArticleImages')}}
                         </label>
                         <input wire:model="temporary_images" type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror" placeholder="Img">
                         @error('temporary_images.*')
@@ -68,7 +68,7 @@
                     @if(!empty($images))
                         <div class="row">
                             <div class="col-12">
-                                <p>Preview pictures:</p>
+                                <p>{{__('ui.createArticelArticleImagesPreview')}}</p>
                                 <div class="row border border-4 border-info rounded py-4">
                                     @foreach($images as $key => $image)
                                         <div class="col my-3">
@@ -76,7 +76,7 @@
                                                 <img src="{{$image->temporaryUrl()}}" style="height: 300px; width: 300px" alt="">
                                             </div>
                                             
-                                            <button type="button" class="btn btn-outline-danger d-block text-center mt-2" wire:click="removeImage({{$key}})">Delete</button>
+                                            <button type="button" class="btn btn-outline-danger d-block text-center mt-2" wire:click="removeImage({{$key}})">{{__('ui.createArticleArticleDeletePreviewButton')}}</button>
                                         </div>
                                     @endforeach
                                 </div>
@@ -86,7 +86,7 @@
                     {{-- input images end --}}
 
                     {{-- button --}}
-                    <button type="submit" class="btn btn-outline-success">Create</button>
+                    <button type="submit" class="btn btn-outline-success">{{__('ui.createArticleArticleCreateButton')}}</button>
                 </form>
                 {{-- form end --}}
             </div>

@@ -46,7 +46,7 @@
                     {{$article->body}}
                 </p>
                 <p>
-                    Published: {{$article->created_at->format('d/m/Y')}}
+                    {{__('ui.showArticleDate')}} {{$article->created_at->format('d/m/Y')}}
                 </p>
                 <p>
                     {{$article->user->name ?? ''}}

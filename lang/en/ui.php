@@ -49,11 +49,89 @@ return [
     'helpBlogParagraph'=>'Discover our latest news about the Crypto World',
     'helpBlogButtonRead'=>'Yea, discover',
 
+    // index all article page
+    'indexTitle'=>'All our article',
+    'indexArticleCategory'=>'Category:',
+    'indexArticleDate'=>'Date:',
+    'indexArticleReadButton'=>'Read more',
+    'indexNoArticle'=>'No articles matching your research. Try something else.',
+
+    // show page
+    'showArticleDate'=>'Published',
+
+    // login page
+    'loginTitle'=>'Login',
+    'loginSubtitle'=>'You are at home.',
+    'loginEmail'=>'Email address',
+    'loginPassword'=>'Password',
+    'loginButton'=>'Login',
+
+    // register page
+    'registerTitle'=>'Register form',
+    'registerSubtitle'=>'Be a Bainanser',
+    'registerFormName'=>'Name and Surname',
+    'registerFormCountry'=>'Country',
+    'registerFormCity'=>'City',
+    'registerFormPhone'=>'Phone',
+    'registerFormEmail'=>'Email address',
+    'registerFormEmailNotShare'=>'Your Email is safe with US.',
+    'registerFormPassword'=>'Password',
+    'registerFormPasswordRepeat'=>'Repeat Password',
+    'registerFormRegisterButton'=>'Register',
+
+    // create article page
+    'createArticleTitle'=>'Create an Article, dear Writer',
+    'createArticleArticleTitle'=>'Title',
+    'createArticleArticleBody'=>'Body',
+    'createArticleArticleCategory'=>'Category',
+    'createArticleArticleChooseCategory'=>'Choose Category',
+    'createArticleArticleImages'=>'Images',
+    'createArticleArticleImagesPreview'=>'Preview',
+    'createArticleArticleDeletePreviewButton'=>'Delete',
+    'createArticleArticleCreateButton'=>'Create',
+
+    // cryptocurrencies page
+    'cryptoPageTitle'=>'The BEST Cryptocurrencies',
+    'cryptoPageSubtitle'=>'And their market flow',
+
+    // category show page
+    'categoryShowWriterName'=>'Author:',
+    'categoryShowNoArticle'=>'No articles for this category!',
+
+    // contact page
+    'contactTitle'=> 'Need help?',
+    'contactSubtitle'=>'Sending us an email!',
+    'contactFormNeverShare'=>'We\'ll never share your email with anyone else.',
+    'contactFormMessage'=>'Your message',
+    'contactFormButton'=>'Send',
+
+    // profile page
+    'profileSubtitle'=>'Modify your information',
+    'profilePicture'=>'Picture',
+    'profileSaveButton'=>'Save',
+
+    // work with us page
+    'workTitle'=>'You want to join our team?',
+    'workParagraph'=>'Click on this button to send a request to become a writer.',
+    'workButton'=>'Become a writer!',
+
+    // faq page
+    'faqTitle'=>'Our Frequent Asked Question',
+    'faqFirstQuestion'=>'Do you prefer FE or BE development?',
+    'faqFirstAnswer'=>' I don\'t want to choose. I love the Front-end development and i\'m fascinated by the Back-end development.',
+    'faqSecondQuestion'=>'In which programming language do you feel more prepared?',
+    'faqSecondAnswer'=>'With Javascript i feel more comfortable at the moment.',
+    'faqThirdQuestion'=>'Have you had a job experience about coding?',
+    'faqThirdAnswer'=>'Not at all. I\'m ready to start a new job experience. All my past jobs grants me a lot of skills useful for every type of jobs.',
+    'faqFourthQuestion'=>'Why this type of website?',
+    'faqFourthAnswer'=>'Because i love the cryptocurrencies and the Blockchain world. In the near future, i have a master in Blockchain.
+    The Bitcoin ideology, fascinating me.',
+
     // footer
     'copyright'=>'© 2022 Bainans Inc',
     'faqs'=>'FAQs',
     'joinTeamFooter'=>'Join our Team',
     'about'=>'About',
     'langDropdown'=>'Language',
-
+    
 ];

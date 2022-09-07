@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>All our Articles</h2>
+                <h2>{{__('ui.indexTitle')}}</h2>
             </div>
         </div>
     </div>
@@ -21,13 +21,13 @@
                                         {{$article->title}}
                                     </h5>
                                     <a href="{{route('categoryShow', ['category'=>$article->category])}}">
-                                        Category: {{$article->category->name}}
+                                        {{__('ui.indexArticleCategory')}} {{$article->category->name}}
                                     </a>
                                     <p class="text-black">
-                                        Date: {{$article->created_at->format('d/m/Y')}}
+                                        {{__('ui.indexArticleDate')}} {{$article->created_at->format('d/m/Y')}}
                                     </p>
                                     <a href="{{route('articles.show', compact('article'))}}" class="btn btn-primary">
-                                        Read more
+                                        {{__('ui.indexArticleReadButton')}}
                                     </a>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@
                     @empty
                         <div class="col-12">
                             <div class="alert alert-warning py-3">
-                                <p class="lead">No articles matching your research. Try something else.</p>
+                                <p class="lead">{{__('ui.indexNoArticle')}}</p>
                             </div>
                         </div>
                     @endforelse
