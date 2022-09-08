@@ -68,7 +68,7 @@
                     @if(!empty($images))
                         <div class="row">
                             <div class="col-12">
-                                <p>{{__('ui.createArticelArticleImagesPreview')}}</p>
+                                <p>{{__('ui.createArticleArticleImagesPreview')}}</p>
                                 <div class="row border border-4 border-info rounded py-4">
                                     @foreach($images as $key => $image)
                                         <div class="col my-3">

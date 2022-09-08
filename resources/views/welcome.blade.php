@@ -42,7 +42,7 @@
             @foreach ($articles as $article)
                 <div class="col-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="{{!$article->images()->get()->isEmpty() ? Storage::url($article->images()->first()->path) : 'http://picsum.photos/200'}}" class="card-img-top" alt="...">
+                        <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400, 300) : 'http://picsum.photos/200'}}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">
                                 {{$article->title}}
