@@ -11,6 +11,7 @@ return [
     'sayHello'=>'Ciao,',
     'writeArticleButton'=>'Scrivi un Articolo',
     'logoutButton'=>'Logout',
+    'writerArticleTitle'=>'I tuoi Articoli',
 
     // homepage
     'tabTitle'=>'Bainans - Home',
@@ -110,6 +111,11 @@ return [
     'profileSubtitle'=>'Modifica le tue informazioni',
     'profilePicture'=>'Foto',
     'profileSaveButton'=>'Salva',
+    // modify article
+    'modifyArticleTableName'=>'Nome',
+    'modifyArticleTableCreatedAt'=>'Data',
+    'modifyArticleTableAction'=>'Azioni',
+    'modifyArticleModifyButton'=>'Modifica',
 
     // work with us page
     'workTitle'=>'Vuoi unirti al nostro team?',

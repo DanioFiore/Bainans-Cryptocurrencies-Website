@@ -11,6 +11,7 @@ return [
     'sayHello'=>'Hi,',
     'writeArticleButton'=>'Write an Article',
     'logoutButton'=>'Logout',
+    'writerArticleTitle'=>'Your Articles',
 
     // homepage
     'tabTitle'=>'Bainans - Home',
@@ -109,6 +110,12 @@ return [
     'profileSubtitle'=>'Modify your information',
     'profilePicture'=>'Picture',
     'profileSaveButton'=>'Save',
+    // modify article
+    'modifyArticleTableName'=>'Name',
+    'modifyArticleTableCreatedAt'=>'Date',
+    'modifyArticleTableAction'=>'Actions',
+    'modifyArticleModifyButton'=>'Modify',
+
 
     // work with us page
     'workTitle'=>'You want to join our team?',

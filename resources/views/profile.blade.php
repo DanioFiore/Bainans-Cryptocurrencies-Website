@@ -33,6 +33,44 @@
                     </div>
                     <button type="submit" class="btn btn-outline-warning">{{__('ui.profileSaveButton')}}</button>
                 </form>
+
+                @if (Auth::user()->is_writer)
+                    <div class="container my-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>{{__('ui.writerArticleTitle')}}</h2>
+                            </div>
+                            
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">{{__('ui.modifyArticleTableName')}}</th>
+                                        <th scope="col">{{__('ui.modifyArticleTableCreatedAt')}}</th>
+                                        <th scope="col">{{__('ui.modifyArticleTableAction')}}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (Auth::user()->articles as $article)
+                                        <tr>
+                                            <td>
+                                                {{$article->title}}
+                                            </td>
+                                            <td>
+                                                {{$article->created_at}}
+                                            </td>
+                                            <td>
+                                                <form action="">
+                                                    <button>{{__('ui.modifyArticleModifyButton')}}</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
