@@ -37,23 +37,23 @@
     
 
     {{-- article start --}}
-    <div class="container">
+    <div class="container mt-5" id="cardContainerWelcome">
         <div class="row">
             @foreach ($articles as $article)
-                <div class="col-4">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-12 col-md-4 my-3 my-md-0">
+                    <div class="card bg-black border border-warning">
                         <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400, 300) : 'http://picsum.photos/200'}}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">
                                 {{$article->title}}
                             </h5>
-                            <a href="{{route('categoryShow', ['category'=>$article->category])}}">
+                            <a class="noStyleA" href="{{route('categoryShow', ['category'=>$article->category])}}">
                                 {{__('ui.cardCategory')}} {{$article->category->name}}
                             </a>
-                            <p class="text-black">
-                                {{__('cardDate')}} {{$article->created_at->format('d/m/Y')}}
+                            <p class="text-white">
+                                {{__('ui.cardDate')}} {{$article->created_at->format('d/m/Y')}}
                             </p>
-                            <a href="{{route('articles.show', compact('article'))}}" class="btn btn-primary">
+                            <a href="{{route('articles.show', compact('article'))}}" class="btn btn-outline-success">
                                 {{__('ui.cardReadMoreButton')}}
                             </a>
                         </div>
@@ -174,7 +174,7 @@
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>Javascript</li>
-                        <li>Vue.js - In progress</li>
+                        {{-- <li>Vue.js - In progress</li> --}}
                         <li>React.js - In progress</li>
                         <li>Node.js</li>
                         <li>Bootstrap</li>
@@ -193,67 +193,61 @@
     
     {{-- help start --}}
     <div class="container mt-5">
-        <div class="row div col-12">
+        <div class="row">
             <h3>
                 {{__('ui.helpTitle')}}
             </h3>
         </div>
     </div>
 
-    <div class="container mt-3 bg-secondary border border-warning border-2 p-3">
-        <div class="row align-items-center">
+    <div class="container mt-3">
+        <div class="row">
             {{-- first col --}}
-            <div class="col-4 d-flex align-items-center justify-content-between">
-                <div class="me-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                    </svg>
-                </div>
+            <div class="col-12 col-md-4 bg-black border border-warning p-3 ">
                 <div>
                     <h5>
-                        {{__('ui.helpClientAssistantTitle')}}
+                        {{__('ui.helpClientAssistantTitle')}} 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                        </svg>
                     </h5>
                     <p>
                         {{__('ui.helpClientAssistantParagraph')}}
                     </p>
-                    <a href="{{route('contactUs')}}">{{__('ui.helpClientAssistantContact')}}</a>
+                    <a href="{{route('contactUs')}}" class="btn btn-outline-success">{{__('ui.helpClientAssistantContact')}}</a>
                 </div>
             </div>
 
             {{-- second col --}}
-            <div class="col-4 d-flex align-items-center justify-content-between">
-                <div class="me-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-question-square-fill" viewBox="0 0 16 16">
-                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.496 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z"/>
-                      </svg>
-                </div>
+            <div class="col-12 col-md-4 bg-black border border-warning p-3">
                 <div>
                     <h5>
                         {{__('ui.helpFaqTitle')}}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question-square-fill" viewBox="0 0 16 16">
+                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.496 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z"/>
+                          </svg>
                     </h5>
                     <p>
                         {{__('ui.helpFaqParagraph')}}
                     </p>
-                    <a href="{{route('faq')}}">{{__('ui.helpFaqButtonRead')}}</a>
+                    <a href="{{route('faq')}}" class="btn btn-outline-success">{{__('ui.helpFaqButtonRead')}}</a>
                 </div>
             </div>
 
             {{-- third col --}}
-            <div class="col-4 d-flex align-items-center justify-content-between">
-                <div class="me-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
-                        <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
-                        <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
-                        </svg>
-                </div>
+            <div class="col-12 col-md-4 bg-black border border-warning p-3">
                 <div>
                     <h5>
                         {{__('ui.helpBlogTitle')}}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                            <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                            <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                        </svg>
                     </h5>
                     <p>
                         {{__('ui.helpBlogParagraph')}}
                     </p>
-                    <a href="{{route('articles.index')}}">{{__('ui.helpBlogButtonRead')}}</a>
+                    <a href="{{route('articles.index')}}" class="btn btn-outline-success">{{__('ui.helpBlogButtonRead')}}</a>
                 </div>
             </div>
         </div>

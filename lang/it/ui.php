@@ -42,7 +42,7 @@ return [
     // help
     'helpTitle'=>'Hai bisogno di aiuto?',
     'helpClientAssistantTitle'=>'Assistenza Clienti 24/7',
-    'helpClientAssistantParagraph'=>'Per tutti i nostri clienti, garantiamo supporto ogni giorno, ogni ora.',
+    'helpClientAssistantParagraph'=>'Garantiamo supporto ogni giorno, ogni ora.',
     'helpClientAssistantContact'=>'Contattaci',
     'helpFaqTitle'=>'FAQ',
     'helpFaqParagraph'=>'Leggi le risposte alle domande frequenti',

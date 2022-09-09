@@ -80,12 +80,21 @@ h1 {
     animation: fadeIn 6s ease-in;
 }
 
+#cardContainerWelcome {
+    animation: fadeIn 1s ease-in;
+}
+
 #titleCryptocurrenciesPage {
     animation: fadeIn 1s ease-in;
 }
 
 #tableCryptocurrenciesContainer {
     animation: fadeUp 1s ease-in;
+}
+
+.noStyleA{
+    text-decoration: none;
+    color: white;
 }
 
 .contactUsPageAnimation {

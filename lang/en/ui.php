@@ -42,7 +42,7 @@ return [
     // help
     'helpTitle'=>'Need Help?',
     'helpClientAssistantTitle'=>'Clients Assistant 24/7',
-    'helpClientAssistantParagraph'=>'For all our clients, we grants support everyday, everytime.',
+    'helpClientAssistantParagraph'=>'We grants support everyday, everytime.',
     'helpClientAssistantContact'=>'Contact us',
     'helpFaqTitle'=>'FAQ',
     'helpFaqParagraph'=>'Read the answer for our frequent asked question.',
