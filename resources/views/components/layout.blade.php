@@ -96,24 +96,41 @@
 
                     {{-- user --}}
                     @auth
-                    <li class="nav-item me-4">
+                    <div class="nav-item dropdown">
+                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{__('ui.sayHello')}} {{Auth::user()->name}} <img src="{{Auth::user()->profile->picture==Storage::url('public/defaultUserPicture.webp') ? Auth::user()->profile->picture : Storage::url(Auth::user()->profile->picture)}}" alt="" style="height: 40px; width: 40px; border-radius: 20px">
+                        </button>
+                        <ul class="dropdown-menu">
+                            @if(Auth::user()->is_writer)
+                                <li><a class="dropdown-item" href="{{route('writer.writePage')}}">{{__('ui.writeArticleButton')}}</a></li>
+                            @endif
+                          <li><a class="dropdown-item" href="{{route('profile')}}">{{__('ui.profileButton')}}</a></li>
+                          <li>
+                            <form action="{{route('logout')}}" method="POST">
+                                @csrf
+                                <button class="btn btn-outline-warning">{{__('ui.logoutButton')}}</button>
+                            </form>
+                          </li>
+                        </ul>
+                      </div>
+                    {{-- <li class="nav-item me-4">
                         <span class="text-white">{{__('ui.sayHello')}} </span>
                         <a href="{{route('profile')}}" id="userProfileName" class="text-white"> {{Auth::user()->name}} <img src="{{Auth::user()->profile->picture==Storage::url('public/defaultUserPicture.webp') ? Auth::user()->profile->picture : Storage::url(Auth::user()->profile->picture)}}" alt="" style="height: 40px; width: 40px; border-radius: 20px"></a>
-                    </li>
+                    </li> --}}
 
                     {{-- writer --}}
-                    @if (Auth::user()->is_writer)
+                    {{-- @if (Auth::user()->is_writer)
                         <li class="nav-item me-4">
                             <a href="{{route('writer.writePage')}}" class="btn btn-outline-success">{{__('ui.writeArticleButton')}}</a>
                         </li>
-                    @endif
+                    @endif --}}
 
-                    <li class="nav-item me-4">
+                    {{-- <li class="nav-item me-4">
                         <form action="{{route('logout')}}" method="POST">
                             @csrf
                             <button class="btn btn-outline-warning">{{__('ui.logoutButton')}}</button>
                         </form>
-                    </li>
+                    </li> --}}
                     @endauth
                 </ul>
             </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Mail\BecomeWriter;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\User;
@@ -28,4 +29,11 @@ class WriterController extends Controller
         Artisan::call('bainans:makeUserWriter', ["email"=>$user->email]);
         return redirect('/')->with('message', 'Congratulation, the user is now a writer.');
     }
+
+    public function modifyPage($id) {
+        $article = Article::findOrFail($id);
+        return view('writer.modifyPage', compact('article'));
+    }
+
+    
 }

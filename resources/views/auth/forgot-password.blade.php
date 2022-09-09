@@ -3,8 +3,7 @@
     <div class="container loginPageAnimation">
         <div class="row justify-content-center">
             <div class="col-6">
-                <h2>{{__('ui.loginTitle')}}</h2>
-                <h4>{{__('ui.loginSubtitle')}}</h4>
+                <h2>{{__('ui.forgotPassTitle')}}</h2>
             </div>
         </div>
     </div>
@@ -14,7 +13,7 @@
     <div class="container loginPageAnimation">
         <div class="row justify-content-center">
             <div class="col-6">
-                <form action="{{route('login')}}" method="POST">
+                <form action="{{route('password.email')}}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label for="emailInput" class="form-label text-warning">
@@ -22,15 +21,8 @@
                         </label>
                         <input type="email" class="form-control" id="emailInput" name="email">
                     </div>
-                    <div class="mb-3">
-                        <label for="passwordInput" class="form-label text-warning">
-                            {{__('ui.loginPassword')}}
-                        </label>
-                        <input type="password" class="form-control" id="passwordInput" name="password">
-                    </div>
-                    <button type="submit" class="btn btn-outline-warning">{{__('ui.loginButton')}}</button>
+                    <button type="submit" class="btn btn-outline-warning">{{__('ui.forgotPassSendResetEmailButton')}}</button>
                 </form>
-                <a href="{{route('password.request')}}">{{__('ui.forgotPassLoginLink')}}</a>
             </div>
         </div>
     </div>

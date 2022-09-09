@@ -50,6 +50,9 @@ Route::get('/make/writer/{user}', [WriterController::class, 'makeWriter'])->name
 // Writer page route
 Route::get('/writer/write-article', [WriterController::class, 'writePage'])->middleware('isWriter')->name('writer.writePage');
 
+// modify article route
+Route::get('/writer/{id}/modify-article', [WriterController::class, 'modifyPage'])->name('writer.modifyPage');
+
 // Category show route
 Route::get('/category/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
 

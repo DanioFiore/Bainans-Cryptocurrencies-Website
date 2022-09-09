@@ -12,6 +12,7 @@ return [
     'writeArticleButton'=>'Scrivi un Articolo',
     'logoutButton'=>'Logout',
     'writerArticleTitle'=>'I tuoi Articoli',
+    'profileButton'=>'Profilo',
 
     // homepage
     'tabTitle'=>'Bainans - Home',
@@ -66,6 +67,11 @@ return [
     'loginEmail'=>'Indirizzo email',
     'loginPassword'=>'Password',
     'loginButton'=>'Login',
+    'forgotPassLoginLink'=>'Hai dimenticato la password?',
+
+     // forgot pass page
+     'forgotPassTitle'=>'Resetta la tua Password',
+     'forgotPassSendResetEmailButton'=>'Invia Email',
     
 
     // register page
@@ -116,6 +122,7 @@ return [
     'modifyArticleTableCreatedAt'=>'Data',
     'modifyArticleTableAction'=>'Azioni',
     'modifyArticleModifyButton'=>'Modifica',
+    'modifyArticlePageTitle'=>'Modifica l\'articolo:',
 
     // work with us page
     'workTitle'=>'Vuoi unirti al nostro team?',

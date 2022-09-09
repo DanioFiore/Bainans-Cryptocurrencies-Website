@@ -12,6 +12,7 @@ return [
     'writeArticleButton'=>'Write an Article',
     'logoutButton'=>'Logout',
     'writerArticleTitle'=>'Your Articles',
+    'profileButton'=>'Profile',
 
     // homepage
     'tabTitle'=>'Bainans - Home',
@@ -66,6 +67,11 @@ return [
     'loginEmail'=>'Email address',
     'loginPassword'=>'Password',
     'loginButton'=>'Login',
+    'forgotPassLoginLink'=>'Forgot your password?',
+
+    // forgot pass page
+    'forgotPassTitle'=>'Reset your Password',
+    'forgotPassSendResetEmailButton'=>'Send Email',
 
     // register page
     'registerTitle'=>'Register form',
@@ -115,6 +121,7 @@ return [
     'modifyArticleTableCreatedAt'=>'Date',
     'modifyArticleTableAction'=>'Actions',
     'modifyArticleModifyButton'=>'Modify',
+    'modifyArticlePageTitle'=>'Edit the Article:',
 
 
     // work with us page
