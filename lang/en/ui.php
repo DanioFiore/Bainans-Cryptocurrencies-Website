@@ -73,6 +73,10 @@ return [
     'forgotPassTitle'=>'Reset your Password',
     'forgotPassSendResetEmailButton'=>'Send Email',
 
+    // reset pass page
+    'resetPasswordTitle'=>'Reset your Password',
+    'resetPasswordFormButton'=>'Reset',
+
     // register page
     'registerTitle'=>'Register form',
     'registerSubtitle'=>'Be a Bainanser',

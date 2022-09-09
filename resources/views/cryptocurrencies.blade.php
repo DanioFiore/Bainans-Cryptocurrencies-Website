@@ -51,7 +51,6 @@
                         @endforeach
                     </tbody>
                 </table>
-                <button id="showMoreCryptoButton" class="btn btn-warning">Show more</button>
             </div>
         </div>
     </div>

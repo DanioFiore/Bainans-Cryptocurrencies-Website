@@ -72,6 +72,10 @@ return [
      // forgot pass page
      'forgotPassTitle'=>'Resetta la tua Password',
      'forgotPassSendResetEmailButton'=>'Invia Email',
+
+     // reset pass page
+    'resetPasswordTitle'=>'Reset your Password',
+    'resetPasswordFormButton'=>'Reset',
     
 
     // register page
