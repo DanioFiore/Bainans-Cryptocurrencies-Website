@@ -41,7 +41,7 @@
         <div class="row">
             @foreach ($articles as $article)
                 <div class="col-12 col-md-4 my-3 my-md-0">
-                    <div class="card bg-black border border-warning">
+                    <div class="card bg-dark border border-warning">
                         <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400, 300) : 'http://picsum.photos/200'}}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">
@@ -189,6 +189,7 @@
             </div>
         </div>
     </div>
+    <img src="/img/programming.webp" alt="" class="welcomeProgrammingImg">
     {{-- our team end --}}
     
     {{-- help start --}}

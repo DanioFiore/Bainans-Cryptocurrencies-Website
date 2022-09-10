@@ -105,6 +105,8 @@ return [
     // cryptocurrencies page
     'cryptoPageTitle'=>'Le MIGLIORI Cryptovalute',
     'cryptoPageSubtitle'=>'Ed il loro andamento di mercato',
+    'cryptoPageParagraph1'=>'Qui, puoi vedere i prezzi attuali per le Cryptovalute più gettonate.',
+    'cryptoPageParagraph2'=>'Ricorda di fare le dovute ricerche prima di fare qualsiasi investimento.',
 
     // category show page
     'categoryShowWriterName'=>'Autore:',

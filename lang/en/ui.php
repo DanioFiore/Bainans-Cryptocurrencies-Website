@@ -104,6 +104,8 @@ return [
     // cryptocurrencies page
     'cryptoPageTitle'=>'The BEST Cryptocurrencies',
     'cryptoPageSubtitle'=>'And their market flow',
+    'cryptoPageParagraph1'=>'Here you can see the price of the major Cryptocurrencies.',
+    'cryptoPageParagraph2'=>' Do your own research before starting investing.',
 
     // category show page
     'categoryShowWriterName'=>'Author:',

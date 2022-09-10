@@ -72,8 +72,7 @@
             </div>
         </div>
     </div>
-   
-
     {{-- register form end --}}
+    <img src="/img/Cryptocurrency-List.webp" alt="" class="cryptoImgRegisterPage">
 
 </x-layout>

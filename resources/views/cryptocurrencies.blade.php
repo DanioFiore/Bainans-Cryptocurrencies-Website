@@ -14,6 +14,23 @@
 
 {{-- title end --}}
 
+{{-- Paragraph start --}}
+<div class="container mb-3 cryptoPageParagraph">
+    <div class="row">
+        <div class="col-6">
+            <span class="text-white">{{__('ui.cryptoPageParagraph1')}}</span>
+            <br>
+            <span class="text-white">{{__('ui.cryptoPageParagraph2')}}</span>
+        </div>
+        <div class="col-6">
+            <img src="/img/busd-logo.webp" alt="" class="cryptoPageCoinLogo">
+            <img src="/img/bnb-logo.webp" alt="" class="cryptoPageCoinLogo">
+            <img src="/img/ethereum-logo-2.webp" alt="" class="cryptoPageCoinLogo">
+        </div>
+    </div>
+</div>
+{{-- paragraph end --}}
+
 {{-- crypto table start --}}
 <div id="tableCryptocurrenciesContainer">
     <div class="container">

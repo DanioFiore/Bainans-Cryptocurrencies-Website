@@ -97,6 +97,7 @@ h1 {
     color: white;
 }
 
+
 .contactUsPageAnimation {
     animation: fadeIn 1s ease-in;
 }
@@ -128,6 +129,46 @@ h1 {
     width: 300px;
 }
 
+.cryptoPageParagraph {
+    border-left: 2px solid orange;
+    animation: fadeIn 1s ease-in;
+}
+
+.cryptoPageCoinLogo {
+    height: 40px;
+    width: 40px;
+    animation: fadeIn 1s ease-in;
+}
+
+.imgLoginTrading {
+    z-index: -1;
+    position: absolute;
+    top:150px;
+    opacity: 0.5;
+}
+
+.forgotPassLink {
+    text-decoration: none;
+}
+
+.cryptoImgRegisterPage {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    top: 250px;
+    left: 110px;
+}
+
+.welcomeProgrammingImg {
+    position: absolute;
+    z-index: -1;
+    width: 300px;
+    height: 150px;
+    top: 2100px;
+    left: 70px;
+    display: none;
+}
+
 /* Breakpoints */
 @media (min-width: 500px){
     h1 {
@@ -145,4 +186,12 @@ h1 {
         font-size: 14rem;
     }
 }
+
+@media (min-width: 1200px) {
+    .welcomeProgrammingImg {
+        display: block;
+    }
+}
+
+
 

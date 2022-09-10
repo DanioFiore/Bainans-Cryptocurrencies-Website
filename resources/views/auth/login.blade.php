@@ -30,10 +30,11 @@
                     </div>
                     <button type="submit" class="btn btn-outline-warning">{{__('ui.loginButton')}}</button>
                 </form>
-                <a href="{{route('password.request')}}">{{__('ui.forgotPassLoginLink')}}</a>
+                <a href="{{route('password.request')}}" class="forgotPassLink text-danger">{{__('ui.forgotPassLoginLink')}}</a>
             </div>
         </div>
     </div>
+    <img src="/img/trading-png.webp" alt="" class="imgLoginTrading">
     
 
     {{-- login form end --}}
