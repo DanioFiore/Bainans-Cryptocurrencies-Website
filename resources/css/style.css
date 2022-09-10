@@ -169,6 +169,10 @@ h1 {
     display: none;
 }
 
+.partner {
+    border-radius: 10px;
+}
+
 /* Breakpoints */
 @media (min-width: 500px){
     h1 {

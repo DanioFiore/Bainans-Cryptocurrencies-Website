@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             @forelse ($articles as $article)
-                <div class="col-12 col-md-4 my-3 my-md-0">
+                <div class="col-12 col-md-4 my-3 mb-3">
                     <div class="card bg-dark border border-warning">
                         <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : 'https://picsum.photos/200'}}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -32,7 +32,7 @@
                 </div>
             @empty
                 <div class="col-12">
-                    <div class="alert alert-warning py-3">
+                    <div class="alert alert-black py-3">
                         <p class="lead">{{__('ui.indexNoArticle')}}</p>
                     </div>
                 </div>

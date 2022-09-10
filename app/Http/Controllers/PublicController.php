@@ -21,7 +21,7 @@ class PublicController extends Controller
         // Cryptocap::getSingleAsset('binance-coin');
         // Cryptocap::getSingleAsset('binance-usd');
         $cryptos = Cryptocap::getAssetsWithLimit(5)->data;
-        $articles = Article::take(3)->get()->sortByDesc('created_at');
+        $articles = Article::take(3)->orderBy('created_at','desc')->get();
         return view('welcome', compact('cryptos'), compact('articles'));
     }
 

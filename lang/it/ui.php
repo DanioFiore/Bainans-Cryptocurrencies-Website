@@ -132,7 +132,8 @@ return [
 
     // work with us page
     'workTitle'=>'Vuoi unirti al nostro team?',
-    'workParagraph'=>'Clicca sul bottone qui sotto per inviare la richiesta per diventare un writer.',
+    'workParagraph1'=>'Clicca sul bottone qui sotto per inviare la richiesta per diventare un writer.',
+    'workParagraph2'=>'Come Writer avrai il compito di scrivere articoli accattivanti, almeno 1 a settimana. Scegli la categoria e scrivi tutti i tuoi pensieri!',
     'workButton'=>'Diventa un writer!',
 
     // faq page

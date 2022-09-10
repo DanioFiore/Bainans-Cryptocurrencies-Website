@@ -68,8 +68,8 @@
                     @if(!empty($images))
                         <div class="row">
                             <div class="col-12">
-                                <p>{{__('ui.createArticleArticleImagesPreview')}}</p>
-                                <div class="row border border-4 border-info rounded py-4">
+                                <h3 class="text-white">{{__('ui.createArticleArticleImagesPreview')}}</h3>
+                                <div class="row border border-4 border-warning rounded py-4 bg-dark">
                                     @foreach($images as $key => $image)
                                         <div class="col my-3">
                                             <div class="mx-auto rounded" >
@@ -86,7 +86,7 @@
                     {{-- input images end --}}
 
                     {{-- button --}}
-                    <button type="submit" class="btn btn-outline-success">{{__('ui.createArticleArticleCreateButton')}}</button>
+                    <button type="submit" class="btn btn-outline-success mt-3">{{__('ui.createArticleArticleCreateButton')}}</button>
                 </form>
                 {{-- form end --}}
             </div>

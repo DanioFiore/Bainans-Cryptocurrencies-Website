@@ -35,13 +35,13 @@
                 </form>
 
                 @if (Auth::user()->is_writer)
-                    <div class="container my-3">
+                    <div class="container my-5">
                         <div class="row">
                             <div class="col-12">
                                 <h2>{{__('ui.writerArticleTitle')}}</h2>
                             </div>
                             
-                            <table class="table">
+                            <table class="table table-dark table-striped">
                                 <thead>
                                     <tr>
                                         <th scope="col">{{__('ui.modifyArticleTableName')}}</th>
@@ -56,7 +56,7 @@
                                                 {{$article->title}}
                                             </td>
                                             <td>
-                                                {{$article->created_at}}
+                                                {{$article->created_at->format('d/m/Y')}}
                                             </td>
                                             {{-- <td>
                                                 <a href="{{route('writer.modifyPage', $article->id)}}" class="btn btn-outline-warning">{{__('ui.modifyArticleModifyButton')}}</a>

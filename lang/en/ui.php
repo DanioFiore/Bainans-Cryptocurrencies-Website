@@ -132,8 +132,10 @@ return [
 
     // work with us page
     'workTitle'=>'You want to join our team?',
-    'workParagraph'=>'Click on this button to send a request to become a writer.',
+    'workParagraph1'=>'Click on this button to send a request to become a writer.',
+    'workParagraph2'=>'As a Writer you will have the task to write catching articles, minimum 1 articles a week. Choose the category and write all your thought!',
     'workButton'=>'Become a writer!',
+
 
     // faq page
     'faqTitle'=>'Our Frequent Asked Question',

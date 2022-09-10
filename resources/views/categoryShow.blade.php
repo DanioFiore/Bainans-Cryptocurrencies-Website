@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 @empty
-                    <div class="col-12">
+                    <div class="col-12 text-white">
                         <p>{{__('ui.categoryShowNoArticle')}}</p>
                     </div>
                 @endforelse
