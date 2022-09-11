@@ -54,7 +54,7 @@ Route::get('/writer/write-article', [WriterController::class, 'writePage'])->mid
 Route::delete('/writer/{id}/delete', [WriterController::class, 'delete'])->name('article.delete');
 
 // Category show route
-Route::get('/category/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
+Route::get('/category/{category}', [PublicController::class, 'categoryShow'])->middleware('auth')->name('categoryShow');
 
 // All articles route
 Route::get('all/articles', [ArticleController::class, 'indexArticle'])->middleware('auth')->name('articles.index');
