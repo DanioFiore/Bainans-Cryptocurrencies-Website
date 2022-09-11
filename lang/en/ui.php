@@ -122,6 +122,8 @@ return [
     'profileSubtitle'=>'Modify your information',
     'profilePicture'=>'Picture',
     'profileSaveButton'=>'Save',
+    // delete article
+    'deleteArticleDeleteButton'=>'Delete',
     // modify article
     'modifyArticleTableName'=>'Name',
     'modifyArticleTableCreatedAt'=>'Date',

@@ -25,8 +25,8 @@ class CreateArticle extends Component
         'title' => 'required | min: 3',
         'body' => 'required | min: 8',
         'category' => 'required',
-        'images.*'=> 'image | max:3000',
-        'temporary_images.*'=> 'image | max:3000',
+        'images.*'=> 'required | image | max:3000',
+        'temporary_images.*'=> 'required | image | max:3000',
     ];
 
     protected $messages = [
@@ -86,7 +86,7 @@ class CreateArticle extends Component
     public function updatedTemporaryImages()
     {
         if ($this->validate([
-            'temporary_images.*'=>'image|max:3000',
+            'temporary_images.*'=>'image|max:3000|required',
         ])) {
             foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;

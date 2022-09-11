@@ -46,7 +46,7 @@
                                     <tr>
                                         <th scope="col">{{__('ui.modifyArticleTableName')}}</th>
                                         <th scope="col">{{__('ui.modifyArticleTableCreatedAt')}}</th>
-                                        {{-- <th scope="col">{{__('ui.modifyArticleTableAction')}}</th> --}}
+                                        <th scope="col">{{__('ui.modifyArticleTableAction')}}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -58,9 +58,13 @@
                                             <td>
                                                 {{$article->created_at->format('d/m/Y')}}
                                             </td>
-                                            {{-- <td>
-                                                <a href="{{route('writer.modifyPage', $article->id)}}" class="btn btn-outline-warning">{{__('ui.modifyArticleModifyButton')}}</a>
-                                            </td> --}}
+                                            <td>
+                                                <form action="{{route('article.delete', $article->id)}}" method="POST">
+                                                    @method('DELETE')
+                                                    @csrf
+                                                    <button class="btn btn-outline-danger">{{__('ui.deleteArticleDeleteButton')}}</button>
+                                                </form>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>

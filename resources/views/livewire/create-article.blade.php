@@ -58,7 +58,7 @@
                         <label for="images" class="text-warning">
                             {{__('ui.createArticleArticleImages')}}
                         </label>
-                        <input wire:model="temporary_images" type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror" placeholder="Img">
+                        <input wire:model="temporary_images" type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror" placeholder="Img" required>
                         @error('temporary_images.*')
                             <p class="text-danger mt-2">
                                 {{$message}}

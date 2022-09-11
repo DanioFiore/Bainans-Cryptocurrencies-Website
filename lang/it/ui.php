@@ -123,6 +123,8 @@ return [
     'profileSubtitle'=>'Modifica le tue informazioni',
     'profilePicture'=>'Foto',
     'profileSaveButton'=>'Salva',
+    // delete article
+    'deleteArticleDeleteButton'=>'Elimina',
     // modify article
     'modifyArticleTableName'=>'Nome',
     'modifyArticleTableCreatedAt'=>'Data',

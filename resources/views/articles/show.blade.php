@@ -9,14 +9,14 @@
                         <div class="carousel-inner">
                             @foreach ($article->images as $image)
                                 <div class="carousel-item @if($loop->first)active @endif">
-                                    <img src="{{Storage::url($image->path)}}" class="img-fluid d-block w-100" alt="">
+                                    <img src="{{Storage::url($image->path)}}" class="img-fluid d-block carousel-img" alt="">
                                 </div>
                             @endforeach
                         </div>
                     @else 
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/200" alt="">
+                                <img src="https://picsum.photos/400/300" alt="">
                             </div>
                         </div>
                     @endif

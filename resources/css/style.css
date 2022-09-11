@@ -181,7 +181,9 @@ h1 {
     position: relative;
 }
 
-
+.carousel-inner > .carousel-item > img{ 
+    margin: auto; 
+}
 
 .partner {
     border-radius: 10px;
@@ -197,6 +199,10 @@ h1 {
 @media (min-width: 768px) {
     h1 {
         font-size: 9.5rem;
+    }
+
+    .carousel-item, .carousel-img {
+        height: 300px;
     }
 }
 @media (min-width: 1024px){

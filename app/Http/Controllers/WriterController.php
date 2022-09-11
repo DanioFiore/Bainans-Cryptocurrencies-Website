@@ -35,5 +35,11 @@ class WriterController extends Controller
         return view('writer.modifyPage', compact('article'));
     }
 
+    public function delete($id) {
+        $article = Article::findOrFail($id);
+        $article->delete();
+        return redirect()->route('profile');
+    }
+
     
 }
