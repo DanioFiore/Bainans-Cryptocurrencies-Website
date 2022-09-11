@@ -164,10 +164,24 @@ h1 {
     z-index: -1;
     width: 300px;
     height: 150px;
-    top: 2100px;
+    bottom: 20px;
     left: 70px;
     display: none;
 }
+
+.helpImg {
+    opacity: 0.5;
+    position: absolute;
+    height: 300px;
+    top: 275px;
+    z-index: -1;
+}
+
+.colHelp {
+    position: relative;
+}
+
+
 
 .partner {
     border-radius: 10px;

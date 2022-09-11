@@ -1,25 +1,15 @@
 <x-layout>
 
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2>
-                    {{$article->name}}
-                </h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
+        <div class="row justify-content-center">
+            <div class="col-6">
                 {{-- carousel start --}}
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                     @if ($article->images)
                         <div class="carousel-inner">
                             @foreach ($article->images as $image)
                                 <div class="carousel-item @if($loop->first)active @endif">
-                                    <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="">
+                                    <img src="{{Storage::url($image->path)}}" class="img-fluid d-block w-100" alt="">
                                 </div>
                             @endforeach
                         </div>
@@ -40,6 +30,11 @@
                     </button>
                 </div>
                 {{-- carousel end --}}
+            </div>
+            <div class="col-12 mt-3">
+                <h2>
+                    {{$article->title}}
+                </h2>
             </div>
             <div class="col-12">
                 <p>

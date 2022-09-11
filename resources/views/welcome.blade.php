@@ -16,7 +16,7 @@
     @endif
 
     @if(session()->has('message'))
-        <div class="flex flex-row justify-center my-2 alert">
+        <div class="flex flex-row justify-center my-2 alert alert-success">
             {{session('message')}}
         </div>
     @endif
@@ -164,7 +164,7 @@
         </div>
     </div>
     
-    <div id="teamSkills" class="container opacity-0">
+    <div id="teamSkills" class="container opacity-0 position-relative">
         <div class="row">
             <div class="col-12 d-flex flex-column align-items-center">
                 <h5>Programming Language</h5>
@@ -188,8 +188,9 @@
                 </div>
             </div>
         </div>
+        <img src="/img/programming.webp" alt="" class="welcomeProgrammingImg">
     </div>
-    <img src="/img/programming.webp" alt="" class="welcomeProgrammingImg">
+    
     {{-- our team end --}}
     
     {{-- help start --}}

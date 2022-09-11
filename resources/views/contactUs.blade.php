@@ -16,7 +16,7 @@
     {{-- form start --}}
     <div class="container contactUsPageAnimation">
         <div class="row justify-content-center">
-            <div class="col-6">
+            <div class="col-6 colHelp">
                 <form class="mt-4" id="formContactUs" method="POST" action="{{route('contactSubmit')}}">
                     @csrf
                     <div class="mb-3">
@@ -35,6 +35,7 @@
                     </div>
                     <button type="submit" class="btn btn-warning">{{__('ui.contactFormButton')}}</button>
                 </form>
+                <img src="/img/help2.webp" alt="" class="helpImg">
             </div>
         </div>
     </div>

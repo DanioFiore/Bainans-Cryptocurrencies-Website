@@ -55,7 +55,7 @@ class PublicController extends Controller
     }
 
     public function searchArticles(Request $request) {
-        $articles = Article::search($request->searched)->paginate(10);
+        $articles = Article::search($request->searched)->paginate(15);
 
         return view('articles.index', compact('articles'));
     }

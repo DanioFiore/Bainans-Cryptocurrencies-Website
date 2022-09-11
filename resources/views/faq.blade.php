@@ -2,10 +2,13 @@
     {{-- title start --}}
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-6">
                 <h2>
                     {{__('ui.faqTitle')}}
                 </h2>
+            </div>
+            <div class="col-6">
+              <img src="/img/question2.webp" alt="" height="50px">
             </div>
         </div>
     </div>
@@ -65,6 +68,7 @@
                         </div>
                       </div>
                   </div>
+                  <img src="/img/question.webp" alt="" width="200px" class="mt-3">
             </div>
         </div>
     </div>
