@@ -20,7 +20,7 @@
                     {{-- input title start --}}
                     <div class="mb-3">
                         <label class="text-warning" for="title">{{__('ui.createArticleArticleTitle')}}</label>
-                        <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
+                        <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror" value="{{old('title')}}">
                         <div class="text-danger">
                             @error('title')
                                 {{$message}}
@@ -32,7 +32,7 @@
                     {{-- input body start --}}
                     <div class="mb-3">
                         <label class="text-warning" for="body">{{__('ui.createArticleArticleBody')}}</label>
-                        <textarea wire:model="body" type="text" class="form-control @error('body') is-invalid @enderror"></textarea>
+                        <textarea wire:model="body" type="text" class="form-control @error('body') is-invalid @enderror">{{old('body')}}</textarea>
                         <div class="text-danger">
                             @error('body')
                                 {{$message}}

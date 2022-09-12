@@ -1,4 +1,22 @@
 <x-layout>
+    @if (session('flash'))
+    <div id="flashDivShow" class="alert alert-success d-flex justify-content-between" style="margin-top: 50px">
+        {{session('flash')}}
+        <button id="closeFlashButton" type="button" class="btn btn-outline-danger">x</button>
+    </div>
+@endif
+
+@if(session()->has('access.denied'))
+    <div class="flex flex-row justify-center my-2 alert alert-danger">
+        {{session('access.denied')}}
+    </div>
+@endif
+
+@if(session()->has('message'))
+    <div class="flex flex-row justify-center my-2 alert alert-success">
+        {{session('message')}}
+    </div>
+@endif
     <div class="container registerPageAnimation">
         <div class="row justify-content-center">
             <div class="col-6">

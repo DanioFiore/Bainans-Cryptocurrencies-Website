@@ -177,12 +177,12 @@ observerTeamSkills.observe(teamSkills);
 
 
 // remove Successfull sending email div
-let flashDivShow = document.querySelector('#flashDivShow')
-let closeFlashButton = document.querySelector('#closeFlashButton')
+// let flashDivShow = document.querySelector('#flashDivShow')
+// let closeFlashButton = document.querySelector('#closeFlashButton')
 
-closeFlashButton.addEventListener('click', ()=> {
-    flashDivShow.style = "visibility: hidden";
-})
+// closeFlashButton.addEventListener('click', ()=> {
+//     flashDivShow.style = "visibility: hidden";
+// })
 
 
 

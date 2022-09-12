@@ -6,9 +6,9 @@
                 {{$category->name}}
             </h2>
             @forelse ($category->articles as $article)
-                <div class="col-12 col-md-4 my-3 my-md-0">
+                <div class="col-12 col-md-4 my-3">
                     <div class="card bg-dark border border-warning">
-                        <img src="{{!$article->images()->get()->isEmpty() ? Storage::url($article->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top" alt="...">
+                        <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400, 300) : 'http://picsum.photos/200'}}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">
                                 {{$article->title}}
